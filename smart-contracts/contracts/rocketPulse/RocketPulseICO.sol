@@ -6,9 +6,9 @@ import {IERC20Metadata} from "./lib/interfaces/IERC20Metadata.sol";
 import {IERC20} from "./lib/interfaces/IERC20.sol";
 import {IPair} from "./lib/dex/IPair.sol";
 import {SafeERC20} from "./lib/token/ERC20/utils/SafeERC20.sol";
-import {Ownable} from "./lib/access/Ownable.sol";
+import {OwnableUpgradeable} from "./libV2/access/OwnableUpgradeable.sol";
 
-contract RocketPulseICO is Ownable {
+contract RocketPulseICO is OwnableUpgradeable {
     address public token;
     address public daiToken;
     address public plsDaiPair;
@@ -33,7 +33,7 @@ contract RocketPulseICO is Ownable {
     event LogSetTokenList(address indexed token, bool isAllow);
 
     // Construct
-    constructor(
+    function initialize(
         address _token,
         address _dai, // address:0xefd766ccb38eaf1dfd701853bfce31359239f305 decimals:18
         address _usdc, // address:0x15d38573d2feeb82e7ad5187ab8c1d52810b1f07 decimals:6
@@ -41,7 +41,8 @@ contract RocketPulseICO is Ownable {
         address _plsDaiPair, // address: 0xE56043671df55dE5CDf8459710433C10324DE0aE,
         uint256 _startTime,
         uint256 _allocatedAmount
-    ) Ownable(msg.sender) {
+    ) public initializer {
+        __Ownable_init(msg.sender);
         token = _token;
         daiToken = _dai;
         plsDaiPair = _plsDaiPair;
@@ -164,7 +165,10 @@ contract RocketPulseICO is Ownable {
         emit LogBuyToken(msg.sender, inToken, inAmount, tokenAmount);
     }
 
-    function _buyTokenExactOut(address inToken, uint256 outAmount) private returns(uint256) {
+    function _buyTokenExactOut(
+        address inToken,
+        uint256 outAmount
+    ) private returns (uint256) {
         totalSoldAmount += outAmount;
 
         tokenBuyAmount[msg.sender] += outAmount;
@@ -172,7 +176,7 @@ contract RocketPulseICO is Ownable {
         uint256 tokenPrice = getCurrentTokenPrice();
         uint256 dicimalExp = 10 ** IERC20Metadata(token).decimals();
 
-        uint256 usdAmount = tokenPrice * outAmount / dicimalExp;
+        uint256 usdAmount = (tokenPrice * outAmount) / dicimalExp;
         totalFundsInUSD += usdAmount;
 
         uint256 inAmount = getPaymentTokenAmount(inToken, usdAmount);
@@ -202,7 +206,12 @@ contract RocketPulseICO is Ownable {
         address paymentToken,
         uint256 payAmount
     ) external buyable(paymentToken, payAmount) {
-        SafeERC20.safeTransferFrom(IERC20(paymentToken), msg.sender, address(this), payAmount);
+        SafeERC20.safeTransferFrom(
+            IERC20(paymentToken),
+            msg.sender,
+            address(this),
+            payAmount
+        );
 
         _buyTokenExactIn(paymentToken, payAmount);
     }
@@ -213,14 +222,26 @@ contract RocketPulseICO is Ownable {
     ) external buyable(paymentToken, buyAmount) {
         uint256 payAmount = _buyTokenExactOut(paymentToken, buyAmount);
 
-        SafeERC20.safeTransferFrom(IERC20(paymentToken), msg.sender, address(this), payAmount);
+        SafeERC20.safeTransferFrom(
+            IERC20(paymentToken),
+            msg.sender,
+            address(this),
+            payAmount
+        );
     }
 
     function claimToken() external {
-        require(getRoundNumber() > 24 || totalSoldAmount >= allocatedAmount, "IN_ROUND");
-        require(tokenBuyAmount[msg.sender] > tokenClaimedAmount[msg.sender], "NO_PENDING");
+        require(
+            getRoundNumber() > 24 || totalSoldAmount >= allocatedAmount,
+            "IN_ROUND"
+        );
+        require(
+            tokenBuyAmount[msg.sender] > tokenClaimedAmount[msg.sender],
+            "NO_PENDING"
+        );
 
-        uint256 pendingAmount = tokenBuyAmount[msg.sender] - tokenClaimedAmount[msg.sender];
+        uint256 pendingAmount = tokenBuyAmount[msg.sender] -
+            tokenClaimedAmount[msg.sender];
 
         SafeERC20.safeTransfer(IERC20(token), msg.sender, pendingAmount);
 
@@ -241,7 +262,10 @@ contract RocketPulseICO is Ownable {
     fallback() external payable {}
 
     function withdrawETH(address to, uint256 amount) external onlyOwner {
-        require(getRoundNumber() > 24 || totalSoldAmount >= allocatedAmount, "IN_ROUND");
+        require(
+            getRoundNumber() > 24 || totalSoldAmount >= allocatedAmount,
+            "IN_ROUND"
+        );
         uint256 balance = address(this).balance;
         require(balance >= amount, "Insufficient funds for withdrawal");
         payable(to).transfer(amount);
@@ -252,7 +276,10 @@ contract RocketPulseICO is Ownable {
         address to,
         uint256 amount
     ) external onlyOwner {
-        require(getRoundNumber() > 24 || totalSoldAmount >= allocatedAmount, "IN_ROUND");
+        require(
+            getRoundNumber() > 24 || totalSoldAmount >= allocatedAmount,
+            "IN_ROUND"
+        );
         uint256 balance = IERC20(_token).balanceOf(address(this));
         require(balance >= amount, "Insufficient funds for withdrawal");
         SafeERC20.safeTransfer(IERC20(_token), to, amount);
