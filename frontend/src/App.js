@@ -9,7 +9,7 @@ import logoImg from "./assets/img/logo.png";
 import MainLayout from "./layout/MainLayout";
 
 import MainPage from "./pages";
-import NewPage from "./pages/new";
+import NewPage from "./pages/new/new";
 
 const renderLoader = () => (
   <div className="w-full h-[calc(100vh-100px)] flex justify-center items-center">
