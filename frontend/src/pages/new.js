@@ -122,7 +122,7 @@ export default function NewPage() {
                                                                         ETH Staked
                                                                     </dt>
                                                                     <dd
-                                                                        class="text-5xl sm:text-8xl font-extrabold block bg-gradient-to-r from-pink-100 via-yellow-300 to-yellow-200 bg-clip-text text-transparent"
+                                                                        class="text-5xl sm:text-8xl font-bold block bg-gradient-to-r from-pink-100 via-yellow-300 to-yellow-200 bg-clip-text text-transparent"
                                                                     >
                                                                         <span>810,080</span>
                                                                     </dd>
@@ -136,7 +136,7 @@ export default function NewPage() {
                                                                         Node Operators
                                                                     </dt>
                                                                     <dd
-                                                                        class="text-5xl sm:text-8xl font-extrabold block bg-gradient-to-r from-pink-100 via-yellow-300 to-yellow-200 bg-clip-text text-transparent"
+                                                                        class="text-5xl sm:text-8xl font-bold block bg-gradient-to-r from-pink-100 via-yellow-300 to-yellow-200 bg-clip-text text-transparent"
                                                                     >
                                                                         <span>3,312</span>
                                                                     </dd>
@@ -165,7 +165,7 @@ export default function NewPage() {
                                             />
                                         </div>
                                         <h2
-                                            class="py-10 text-center text-4xl font-extrabold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
+                                            class="py-10 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
                                         >
                                             Stake + Run Node
                                         </h2>
@@ -297,7 +297,7 @@ export default function NewPage() {
                                                                 ETH Rewards
                                                             </dt>
                                                             <dd
-                                                                class="order-1 text-5xl sm:text-2xl font-extrabold purple-gradient bg-clip-text text-transparent tracking-tight"
+                                                                class="order-1 text-5xl sm:text-2xl font-bold purple-gradient bg-clip-text text-transparent tracking-tight"
                                                             >
                                                                 ≈ 7.10% APR
                                                             </dd>
@@ -346,7 +346,7 @@ export default function NewPage() {
                                                                 Variable
                                                             </dt>
                                                             <dd
-                                                                class="order-1 text-5xl sm:text-2xl font-extrabold purple-gradient bg-clip-text text-transparent tracking-tight"
+                                                                class="order-1 text-5xl sm:text-2xl font-bold purple-gradient bg-clip-text text-transparent tracking-tight"
                                                             >
                                                                 + RPL Rewards
                                                             </dd>
@@ -380,7 +380,7 @@ export default function NewPage() {
                                             />
                                         </div>
                                         <h2
-                                            class="py-10 text-center text-4xl font-extrabold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
+                                            class="py-10 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
                                         >
                                             Stake ETH
                                         </h2>
@@ -514,7 +514,7 @@ export default function NewPage() {
                                                                 Based on 7 day average
                                                             </dt>
                                                             <dd
-                                                                class="order-1 text-5xl sm:text-2xl font-extrabold purple-gradient bg-clip-text text-transparent tracking-tight"
+                                                                class="order-1 text-5xl sm:text-2xl font-bold purple-gradient bg-clip-text text-transparent tracking-tight"
                                                             >
                                                                 ≈ 3.03% APR
                                                             </dd>
@@ -551,7 +551,7 @@ export default function NewPage() {
                             <div class="p-2 md:p-0 relative max-w-7xl mx-auto">
                                 <div class="text-center">
                                     <h2
-                                        class="py-2 text-center text-4xl font-extrabold tracking-tight sm:text-6xl bg-gradient-to-r from-yellow-200 to-yellow-500 bg-clip-text text-transparent leading-8"
+                                        class="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-yellow-200 to-yellow-500 bg-clip-text text-transparent leading-8"
                                     >
                                         Security
                                     </h2>
@@ -775,7 +775,7 @@ export default function NewPage() {
                             <div class="p-2 md:p-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                                 <div class="lg:text-center">
                                     <h2
-                                        class="py-2 text-center text-4xl font-extrabold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
+                                        class="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
                                     >
                                         How does Rocket Pool work?
                                     </h2>
@@ -999,7 +999,7 @@ export default function NewPage() {
                                     class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8"
                                 >
                                     <h2
-                                        class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+                                        class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
                                     >
                                         <span
                                             class="block bg-gradient-to-r from-yellow-200 to-red-600 bg-clip-text text-transparent"
@@ -1061,7 +1061,7 @@ export default function NewPage() {
                             <div class="p-2 md:p-0 relative max-w-7xl mx-auto">
                                 <div class="text-center">
                                     <h2
-                                        class="py-2 text-center text-4xl font-extrabold tracking-tight sm:text-6xl bg-gradient-to-r from-yellow-200 to-yellow-500 bg-clip-text text-transparent leading-8"
+                                        class="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-yellow-200 to-yellow-500 bg-clip-text text-transparent leading-8"
                                     >
                                         Community
                                     </h2>
@@ -1323,7 +1323,7 @@ export default function NewPage() {
                                 >
                                     <div>
                                         <h2
-                                            class="py-2 text-center text-4xl font-extrabold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
+                                            class="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
                                         >
                                             Latest News
                                         </h2>
@@ -1653,7 +1653,7 @@ export default function NewPage() {
                                 <div class="space-y-12">
                                     <div class="text-center">
                                         <h2
-                                            class="py-2 text-center text-4xl font-extrabold tracking-tight sm:text-6xl bg-gradient-to-r from-red-300 via-yellow-300 to-red-400 bg-clip-text text-transparent leading-8"
+                                            class="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-300 via-yellow-300 to-red-400 bg-clip-text text-transparent leading-8"
                                         >
                                             Our Team
                                         </h2>
@@ -1853,7 +1853,7 @@ export default function NewPage() {
                                 >
                                     <div class="lg:text-center">
                                         <h2
-                                            class="py-2 text-center text-4xl font-extrabold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
+                                            class="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
                                         >
                                             Oracle DAO
                                         </h2>
@@ -2293,7 +2293,7 @@ export default function NewPage() {
                                     class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8"
                                 >
                                     <h2
-                                        class="py-2 text-center text-4xl font-extrabold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
+                                        class="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
                                     >
                                         <span class="block">Interested in node operation?</span>
                                     </h2>
