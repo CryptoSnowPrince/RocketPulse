@@ -6,16 +6,15 @@ import {ERC20Burnable, ERC20} from "./lib/token/ERC20/extensions/ERC20Burnable.s
 import {Ownable} from "./lib/access/Ownable.sol";
 
 contract RocketPulseRPLSToken is ERC20Burnable, Ownable {
-    /**** Properties ****/
-    uint256 constant totalInitialSupply = 180 * 10 ** 6 * 10 ** 18;
-
     /**** Contracts ****/
 
     // Construct
     constructor() ERC20("Rocket Pulse RPLS Token", "RPLS") Ownable(msg.sender) {
         // Mint the 180m tokens
-        _mint(address(this), totalInitialSupply);
+        _mint(address(this), 180 * 10 ** 6 * 10 ** 18);
     }
 
-    function mint() external onlyOwner {}
+    function mint(address account, uint256 value) external onlyOwner {
+        _mint(account, value);
+    }
 }
