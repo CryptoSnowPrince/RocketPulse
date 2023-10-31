@@ -48,7 +48,7 @@ export default function Header() {
                         <div class="relative pt-6 pb-16 sm:pb-24">
                             <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
                                 <div class="flex justify-center">
-                                    <img
+                                    <img alt="img"
                                         src={"https://rocketpool.net/assets/rocketpool-a7624790.webp"}
                                         class="md:max-w-3xl"
                                     />

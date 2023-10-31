@@ -191,7 +191,9 @@ export default function Footer() {
                                 >
                                     Staking
                                 </h3>
-                                <ul role="list" class="mt-4 space-y-4">
+                                <ul
+                                    // role="list" 
+                                    class="mt-4 space-y-4">
                                     <li>
                                         <a
                                             href="https://docs.rocketpool.net/guides/staking/overview.html"
@@ -232,7 +234,9 @@ export default function Footer() {
                                 >
                                     Node Operation
                                 </h3>
-                                <ul role="list" class="mt-4 space-y-4">
+                                <ul
+                                    // role="list" 
+                                    class="mt-4 space-y-4">
                                     <li>
                                         <a
                                             href="https://docs.rocketpool.net/guides/node/responsibilities.html#how-rocket-pool-nodes-work"
@@ -275,7 +279,9 @@ export default function Footer() {
                                 >
                                     Learn
                                 </h3>
-                                <ul role="list" class="mt-4 space-y-4">
+                                <ul
+                                    // role="list" 
+                                    class="mt-4 space-y-4">
                                     <li>
                                         <a
                                             href="https://docs.rocketpool.net/overview/"
@@ -316,7 +322,9 @@ export default function Footer() {
                                 >
                                     Governance
                                 </h3>
-                                <ul role="list" class="mt-4 space-y-4">
+                                <ul
+                                    // role="list" 
+                                    class="mt-4 space-y-4">
                                     <li>
                                         <a
                                             href="https://dao.rocketpool.net/"

@@ -24,13 +24,13 @@ export default function Team() {
                         </p>
                     </div>
                     <ul
-                        role="list"
+                        // role="list"
                         class="mx-auto space-y-16 sm:space-y-0 lg:max-w-4xl"
                     >
                         <li>
                             <div class="space-y-6 sm:flex py-8">
                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
-                                    <img
+                                    <img alt="img"
                                         class="h-30 w-30 mx-auto"
                                         src="https://rocketpool.net/assets/team-member-david-5971f0c8.webp"
                                     />
@@ -59,7 +59,7 @@ export default function Team() {
                         <li>
                             <div class="space-y-6 sm:flex py-8">
                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
-                                    <img
+                                    <img alt="img"
                                         class="h-30 w-30 mx-auto"
                                         src="https://rocketpool.net/assets/team-member-darren-0f32af92.webp"
                                     />
@@ -88,7 +88,7 @@ export default function Team() {
                         <li>
                             <div class="space-y-6 sm:flex py-8">
                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
-                                    <img
+                                    <img alt="img"
                                         class="h-30 w-30 mx-auto"
                                         src="https://rocketpool.net/assets/team-member-kane-ca4d7caf.webp"
                                     />
@@ -117,7 +117,7 @@ export default function Team() {
                         <li>
                             <div class="space-y-6 sm:flex py-8">
                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
-                                    <img
+                                    <img alt="img"
                                         class="h-30 w-30 mx-auto"
                                         src="https://rocketpool.net/assets/team-member-nick-dc2e81e7.webp"
                                     />
@@ -146,7 +146,7 @@ export default function Team() {
                         <li>
                             <div class="space-y-6 sm:flex py-8">
                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
-                                    <img
+                                    <img alt="img"
                                         class="h-30 w-30 mx-auto"
                                         src="https://rocketpool.net/assets/team-member-joe-6f13a8d6.webp"
                                     />
@@ -175,7 +175,7 @@ export default function Team() {
                         <li>
                             <div class="space-y-6 sm:flex py-8">
                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
-                                    <img
+                                    <img alt="img"
                                         class="h-30 w-30 mx-auto"
                                         src="https://rocketpool.net/assets/team-member-mav-nick-4145d242.webp"
                                     />

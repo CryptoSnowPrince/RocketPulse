@@ -53,7 +53,7 @@ export default function Security() {
                             <div class="mt-6 flex items-center justify-center">
                                 <a
                                     href="https://rocketpool.net/files/sigma-prime-audit.pdf"
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                     class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-semibold rounded-md text-white rp-button"
                                 >
                                     May 2021
@@ -62,7 +62,7 @@ export default function Security() {
                             <div class="mt-6 flex items-center justify-center">
                                 <a
                                     href="https://rocketpool.net/files/sigma-prime-fix-review.pdf"
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                     class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-semibold rounded-md text-white rp-button"
                                 >
                                     November 2021
@@ -71,7 +71,7 @@ export default function Security() {
                             <div class="mt-6 flex items-center justify-center">
                                 <a
                                     href="https://rocketpool.net/files/sigma-prime-audit-redstone.pdf"
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                     class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-semibold rounded-md text-white rp-button"
                                 >
                                     June 2022
@@ -80,7 +80,7 @@ export default function Security() {
                             <div class="mt-6 flex items-center justify-center">
                                 <a
                                     href="https://rocketpool.net/files/sigma-prime-atlas-v1.2.pdf"
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                     class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-semibold rounded-md text-white rp-button"
                                 >
                                     December 2022

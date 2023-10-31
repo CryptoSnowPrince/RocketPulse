@@ -9,7 +9,7 @@ export default function StakingRunNode() {
                 >
                     <div class="max-w-3xl mx-auto text-center pb-10">
                         <div class="flex justify-center">
-                            <img
+                            <img alt="img"
                                 src={"https://rocketpool.net/assets/services-panel-node-bab61c83.webp"}
                             />
                         </div>
@@ -211,7 +211,7 @@ export default function StakingRunNode() {
                         <div class="rounded-md shadow">
                             <a
                                 href="https://rocketpool.net/node-operators"
-                                target="_blank"
+                                target="_blank" rel="noreferrer"
                                 class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-md text-white rp-button md:py-5 md:text-3xl md:px-10"
                             >
                                 Get started
@@ -224,7 +224,7 @@ export default function StakingRunNode() {
                 >
                     <div class="max-w-3xl mx-auto text-center pb-10">
                         <div class="flex justify-center">
-                            <img
+                            <img alt="img"
                                 src="https://rocketpool.net/assets/services-panel-stake-e2d9b9e2.webp"
                             />
                         </div>
