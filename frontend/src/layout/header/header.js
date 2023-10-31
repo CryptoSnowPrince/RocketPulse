@@ -48,7 +48,7 @@ export default function Header() {
                     <div className="bg-clouds-top"></div>
                     <div className="relative overflow-hidden">
                         <div className="relative pt-6 pb-16 sm:pb-24">
-                            <main className="lg:mt-16 mt-5 mx-auto max-w-7xl px-4 sm:mt-24">
+                            <main className="lg:mt-16 mt-5 mx-auto max-w-7xl lg:px-4 px-1 sm:mt-24">
                                 <div className="flex flex-col lg:flex-row justify-items-center lg:justify-between gap-3">
                                     <img alt="img"
                                         src={"https://rocketpool.net/assets/rocketpool-a7624790.webp"}

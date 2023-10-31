@@ -11,7 +11,7 @@ import StakingRunNode from "../../components/stakingRunNode";
 import Security from "../../components/security";
 import HowItWorks from "../../components/howItWorks";
 import Community from "../../components/community";
-import News from "../../components/news";
+// import News from "../../components/news";
 import Team from "../../components/team";
 import Dao from "../../components/dao";
 import NodeOperator from "../../components/nodeOperator";
@@ -65,7 +65,7 @@ export default function IcoPage() {
                         <Security />
                         <HowItWorks />
                         <Community />
-                        <News />
+                        {/* <News /> */}
                         <Team />
                         <Dao />
                         <NodeOperator />

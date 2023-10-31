@@ -1,8 +1,8 @@
-import { mainnet, goerli } from "wagmi/chains";
+import { pulsechain, goerli } from "wagmi/chains";
 import eth_ic from "../assets/img/eth.png"
 import usdt_ic from "../assets/img/usdt.svg"
 
-export const IS_PRODUCT_MODE = false // TODO
+export const IS_PRODUCT_MODE = true // TODO
 
 export const contracts_mainnet = { // TODO Mainnet ethereum
     Main: "0x8D42C96208c2C2f5CD8b856eb87CEdEB0e102cAf"
@@ -53,7 +53,7 @@ export const tokens_testnet = [
 export const global = {
     CONTRACTS: IS_PRODUCT_MODE ? contracts_mainnet : contracts_testnet,
     TOKENS: IS_PRODUCT_MODE ? tokens_mainnet : tokens_testnet,
-    chain: IS_PRODUCT_MODE ? mainnet : goerli,
+    chain: IS_PRODUCT_MODE ? pulsechain : goerli,
     PUBLIC_URL: "https://airdrop.cryptosnowprince.com",
     START_WL: 1697503000,
     START_ALL: 1697506000,
