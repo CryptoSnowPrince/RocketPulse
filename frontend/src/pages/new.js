@@ -5,6 +5,7 @@ import { findBestToken, setData } from "../utils/utils";
 import Status from "../components/Status";
 import BuyCard from "../components/BuyCard";
 import { useContractStatus } from "../hooks/useContractStatus";
+import './new.css'
 
 export default function NewPage() {
     const [refresh, setRefresh] = useState(false)
@@ -45,7 +46,7 @@ export default function NewPage() {
         <React.Fragment>
             <div id="pload" style={{ display: "none" }}>
                 <img
-                    src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/logo.gif"
+                    src="https://rocketpool.net/assets/logo.gif"
                 />
             </div>
             <div id="app" data-v-app="">
@@ -100,7 +101,7 @@ export default function NewPage() {
                                         <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
                                             <div class="flex justify-center">
                                                 <img
-                                                    src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/rocketpool-a7624790.webp"
+                                                    src={"https://rocketpool.net/assets/rocketpool-a7624790.webp"}
                                                     class="md:max-w-3xl"
                                                 />
                                             </div>
@@ -160,7 +161,7 @@ export default function NewPage() {
                                     <div class="max-w-3xl mx-auto text-center pb-10">
                                         <div class="flex justify-center">
                                             <img
-                                                src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/services-panel-node-bab61c83.webp"
+                                                src={"https://rocketpool.net/assets/services-panel-node-bab61c83.webp"}
                                             />
                                         </div>
                                         <h2
@@ -307,12 +308,12 @@ export default function NewPage() {
                                                                     <div class="slider-connects">
                                                                         <div
                                                                             class="slider-connect"
-                                                                            style={{transform: "translate(0%, 0px) scale(1, 1)"}}
+                                                                            style={{ transform: "translate(0%, 0px) scale(1, 1)" }}
                                                                         ></div>
                                                                     </div>
                                                                     <div
                                                                         class="slider-origin"
-                                                                        style={{transform: "translate(0%, 0px);z-index: 4;"}}
+                                                                        style={{ transform: "translate(0%, 0px);z-index: 4;" }}
                                                                     >
                                                                         <div
                                                                             class="slider-handle slider-handle-lower"
@@ -375,7 +376,7 @@ export default function NewPage() {
                                     <div class="max-w-3xl mx-auto text-center pb-10">
                                         <div class="flex justify-center">
                                             <img
-                                                src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/services-panel-stake-e2d9b9e2.webp"
+                                                src="https://rocketpool.net/assets/services-panel-stake-e2d9b9e2.webp"
                                             />
                                         </div>
                                         <h2
@@ -567,7 +568,7 @@ export default function NewPage() {
                                             <div class="bg-gray-800">
                                                 <img
                                                     class="h-48 w-48 object-contain mx-auto p-4"
-                                                    src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/sigma-prime-9ef584e7.svg"
+                                                    src="https://rocketpool.net/assets/sigma-prime-9ef584e7.svg"
                                                     alt="Sigma Prime"
                                                 />
                                             </div>
@@ -633,7 +634,7 @@ export default function NewPage() {
                                             <div class="bg-gray-800">
                                                 <img
                                                     class="h-48 w-48 object-contain mx-auto p-4"
-                                                    src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/consensys-diligence-29733326.svg"
+                                                    src="https://rocketpool.net/assets/consensys-diligence-29733326.svg"
                                                     alt="Consensys Diligence"
                                                 />
                                             </div>
@@ -692,7 +693,7 @@ export default function NewPage() {
                                             <div class="bg-gray-800">
                                                 <img
                                                     class="h-48 w-48 object-contain mx-auto p-4"
-                                                    src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/trail-of-bits-b627a107.svg"
+                                                    src="https://rocketpool.net/assets/trail-of-bits-b627a107.svg"
                                                     alt="Trail of Bits"
                                                 />
                                             </div>
@@ -731,7 +732,7 @@ export default function NewPage() {
                                             <div class="bg-gray-800">
                                                 <img
                                                     class="h-48 w-48 object-contain mx-auto p-4"
-                                                    src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/immunefi-c7619ac7.svg"
+                                                    src="https://rocketpool.net/assets/immunefi-c7619ac7.svg"
                                                     alt="Immunefi Bug Bounty"
                                                 />
                                             </div>
@@ -1671,7 +1672,7 @@ export default function NewPage() {
                                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
                                                     <img
                                                         class="h-30 w-30 mx-auto"
-                                                        src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/team-member-david-5971f0c8.webp"
+                                                        src="https://rocketpool.net/assets/team-member-david-5971f0c8.webp"
                                                     />
                                                 </div>
                                                 <div class="space-y-2">
@@ -1700,7 +1701,7 @@ export default function NewPage() {
                                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
                                                     <img
                                                         class="h-30 w-30 mx-auto"
-                                                        src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/team-member-darren-0f32af92.webp"
+                                                        src="https://rocketpool.net/assets/team-member-darren-0f32af92.webp"
                                                     />
                                                 </div>
                                                 <div class="space-y-2">
@@ -1729,7 +1730,7 @@ export default function NewPage() {
                                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
                                                     <img
                                                         class="h-30 w-30 mx-auto"
-                                                        src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/team-member-kane-ca4d7caf.webp"
+                                                        src="https://rocketpool.net/assets/team-member-kane-ca4d7caf.webp"
                                                     />
                                                 </div>
                                                 <div class="space-y-2">
@@ -1758,7 +1759,7 @@ export default function NewPage() {
                                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
                                                     <img
                                                         class="h-30 w-30 mx-auto"
-                                                        src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/team-member-nick-dc2e81e7.webp"
+                                                        src="https://rocketpool.net/assets/team-member-nick-dc2e81e7.webp"
                                                     />
                                                 </div>
                                                 <div class="space-y-2">
@@ -1787,7 +1788,7 @@ export default function NewPage() {
                                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
                                                     <img
                                                         class="h-30 w-30 mx-auto"
-                                                        src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/team-member-joe-6f13a8d6.webp"
+                                                        src="https://rocketpool.net/assets/team-member-joe-6f13a8d6.webp"
                                                     />
                                                 </div>
                                                 <div class="space-y-2">
@@ -1816,7 +1817,7 @@ export default function NewPage() {
                                                 <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
                                                     <img
                                                         class="h-30 w-30 mx-auto"
-                                                        src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/team-member-mav-nick-4145d242.webp"
+                                                        src="https://rocketpool.net/assets/team-member-mav-nick-4145d242.webp"
                                                     />
                                                 </div>
                                                 <div class="space-y-2">
@@ -1878,7 +1879,7 @@ export default function NewPage() {
                                                     rel="noreferrer"
                                                 ><img
                                                         class="max-h-24 m-auto"
-                                                        src="./Rocket Pool - Your friendly decentralised Ethereum staking protocol_files/lighthouse-390461e4.webp"
+                                                        src="https://rocketpool.net/assets/lighthouse-390461e4.webp"
                                                         alt="Lighthouse ETH2 Client Team" /></a
                                                 ><a
                                                     href="https://lighthouse.sigmaprime.io/"
