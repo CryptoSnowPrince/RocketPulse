@@ -8,8 +8,8 @@ import logoImg from "./assets/img/logo.png";
 
 import MainLayout from "./layout/MainLayout";
 
-import MainPage from "./pages";
-import NewPage from "./pages/new/new";
+// import MainPage from "./pages";
+import IcoPage from "./pages/new/ico";
 
 const renderLoader = () => (
   <div className="w-full h-[calc(100vh-100px)] flex justify-center items-center">
@@ -33,8 +33,8 @@ function App() {
               <MainLayout>
                 <Suspense fallback={renderLoader()}>
                   <Routes>
-                    <Route path="/" element={<MainPage />} />
-                    <Route path="/new" element={<NewPage />} />
+                    {/* <Route path="/old" element={<MainPage />} /> */}
+                    <Route path="/" element={<IcoPage />} />
                   </Routes>
                 </Suspense>
               </MainLayout>

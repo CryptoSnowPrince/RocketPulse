@@ -1,36 +1,36 @@
 export default function News() {
     return (
-        <div class="bg-white py-16 sm:py-24" id="news">
-            <div class="relative sm:py-16">
+        <div className="bg-white py-16 sm:py-24" id="news">
+            <div className="relative sm:py-16">
                 <div
-                    class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
+                    className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
                 >
                     <div>
                         <h2
-                            class="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
+                            className="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
                         >
                             Latest News
                         </h2>
                         <p
-                            class="mt-4 text-center max-w-3xl text-xl text-gray-600 lg:mx-auto font-semibold"
+                            className="mt-4 text-center max-w-3xl text-xl text-gray-600 lg:mx-auto font-semibold"
                         >
                             Read more about what is happening with the protocol.
                         </p>
                     </div>
-                    <div data-headlessui-state="open" class="mt-6 p-6 bg-gray-50">
-                        <dt class="text-lg">
+                    <div data-headlessui-state="open" className="mt-6 p-6 bg-gray-50">
+                        <dt className="text-lg">
                             <button
                                 id="headlessui-disclosure-button-1"
                                 type="button"
                                 aria-expanded="true"
                                 aria-controls="headlessui-disclosure-panel-2"
                                 data-headlessui-state="open"
-                                class="text-left w-full flex justify-between items-start text-gray-400"
+                                className="text-left w-full flex justify-between items-start text-gray-400"
                             >
-                                <span class="text-xl text-gray-600 font-semibold"
+                                <span className="text-xl text-gray-600 font-semibold"
                                 >2023
                                 </span>
-                                <span class="ml-6 h-7 flex items-center"
+                                <span className="ml-6 h-7 flex items-center"
                                 ><svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -38,7 +38,7 @@ export default function News() {
                                     stroke-width="1.5"
                                     stroke="currentColor"
                                     aria-hidden="true"
-                                    class="-rotate-180 h-6 w-6 transform"
+                                    className="-rotate-180 h-6 w-6 transform"
                                 >
                                         <path
                                             stroke-linecap="round"
@@ -52,31 +52,31 @@ export default function News() {
                         <dd
                             id="headlessui-disclosure-panel-2"
                             data-headlessui-state="open"
-                            class="mt-2 pr-12 bg-gray-50"
+                            className="mt-2 pr-12 bg-gray-50"
                         >
-                            <div class="mt-2 pt-2 grid gap-8">
+                            <div className="mt-2 pt-2 grid gap-8">
                                 <div target="_blank" rel="noreferrer">
-                                    <p class="text-sm text-indigo-600">
+                                    <p className="text-sm text-indigo-600">
                                         <time datetime="4th March, 2023"
                                         >4th March, 2023</time>
                                     </p>
                                     <a
                                         href="https://medium.com/rocket-pool/rocket-pool-atlas-upgrade-7c69e39a3d5f"
-                                        class="mt-2 block"
-                                    ><p class="text-xl font-semibold text-gray-900">
+                                        className="mt-2 block"
+                                    ><p className="text-xl font-semibold text-gray-900">
                                             Rocket Pool — Atlas Upgrade
                                         </p>
-                                        <p class="mt-3 text-base text-gray-500">
+                                        <p className="mt-3 text-base text-gray-500">
                                             Hello Rocket Poolers! Today we’re excited to
                                             officially announce the protocol’s next major
                                             upgrade, Atlas!
                                         </p></a>
-                                    <div class="mt-3">
+                                    <div className="mt-3">
                                         <a
                                             href="https://medium.com/rocket-pool/rocket-pool-atlas-upgrade-7c69e39a3d5f"
                                             target="_blank"
                                             rel="noreferrer"
-                                            class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-semibold rounded-md text-white rp-button"
+                                            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-semibold rounded-md text-white rp-button"
                                         >
                                             Read full story
                                         </a>
@@ -85,25 +85,25 @@ export default function News() {
                             </div>
                         </dd>
                     </div>
-                    <div class="relative p-6">
+                    <div className="relative p-6">
                         <div
-                            class="absolute inset-0 flex items-center"
+                            className="absolute inset-0 flex items-center"
                             aria-hidden="true"
                         >
-                            <div class="border-t border-gray-300 w-9/12 mx-auto"></div>
+                            <div className="border-t border-gray-300 w-9/12 mx-auto"></div>
                         </div>
                     </div>
-                    <div data-headlessui-state="" class="mt-6 p-6 bg-gray-50">
-                        <dt class="text-lg">
+                    <div data-headlessui-state="" className="mt-6 p-6 bg-gray-50">
+                        <dt className="text-lg">
                             <button
                                 id="headlessui-disclosure-button-3"
                                 type="button"
                                 aria-expanded="false"
                                 data-headlessui-state=""
-                                class="text-left w-full flex justify-between items-start text-gray-400"
+                                className="text-left w-full flex justify-between items-start text-gray-400"
                             >
-                                <span class="text-xl text-gray-600 font-semibold"
-                                >2022</span><span class="ml-6 h-7 flex items-center"
+                                <span className="text-xl text-gray-600 font-semibold"
+                                >2022</span><span className="ml-6 h-7 flex items-center"
                                 ><svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -111,7 +111,7 @@ export default function News() {
                                     stroke-width="1.5"
                                     stroke="currentColor"
                                     aria-hidden="true"
-                                    class="rotate-0 h-6 w-6 transform"
+                                    className="rotate-0 h-6 w-6 transform"
                                 >
                                         <path
                                             stroke-linecap="round"
@@ -123,25 +123,25 @@ export default function News() {
                             </button>
                         </dt>
                     </div>
-                    <div class="relative p-6">
+                    <div className="relative p-6">
                         <div
-                            class="absolute inset-0 flex items-center"
+                            className="absolute inset-0 flex items-center"
                             aria-hidden="true"
                         >
-                            <div class="border-t border-gray-300 w-9/12 mx-auto"></div>
+                            <div className="border-t border-gray-300 w-9/12 mx-auto"></div>
                         </div>
                     </div>
-                    <div data-headlessui-state="" class="p-6 bg-gray-50">
-                        <dt class="text-lg">
+                    <div data-headlessui-state="" className="p-6 bg-gray-50">
+                        <dt className="text-lg">
                             <button
                                 id="headlessui-disclosure-button-5"
                                 type="button"
                                 aria-expanded="false"
                                 data-headlessui-state=""
-                                class="text-left w-full flex justify-between items-start text-gray-400"
+                                className="text-left w-full flex justify-between items-start text-gray-400"
                             >
-                                <span class="text-xl text-gray-600 font-semibold"
-                                >2021</span><span class="ml-6 h-7 flex items-center"
+                                <span className="text-xl text-gray-600 font-semibold"
+                                >2021</span><span className="ml-6 h-7 flex items-center"
                                 ><svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -149,7 +149,7 @@ export default function News() {
                                     stroke-width="1.5"
                                     stroke="currentColor"
                                     aria-hidden="true"
-                                    class="rotate-0 h-6 w-6 transform"
+                                    className="rotate-0 h-6 w-6 transform"
                                 >
                                         <path
                                             stroke-linecap="round"
@@ -161,25 +161,25 @@ export default function News() {
                             </button>
                         </dt>
                     </div>
-                    <div class="relative p-6">
+                    <div className="relative p-6">
                         <div
-                            class="absolute inset-0 flex items-center"
+                            className="absolute inset-0 flex items-center"
                             aria-hidden="true"
                         >
-                            <div class="border-t border-gray-300 w-9/12 mx-auto"></div>
+                            <div className="border-t border-gray-300 w-9/12 mx-auto"></div>
                         </div>
                     </div>
-                    <div data-headlessui-state="" class="p-6 bg-gray-50">
-                        <dt class="text-lg">
+                    <div data-headlessui-state="" className="p-6 bg-gray-50">
+                        <dt className="text-lg">
                             <button
                                 id="headlessui-disclosure-button-7"
                                 type="button"
                                 aria-expanded="false"
                                 data-headlessui-state=""
-                                class="text-left w-full flex justify-between items-start text-gray-400"
+                                className="text-left w-full flex justify-between items-start text-gray-400"
                             >
-                                <span class="text-xl text-gray-600 font-semibold"
-                                >2020</span><span class="ml-6 h-7 flex items-center"
+                                <span className="text-xl text-gray-600 font-semibold"
+                                >2020</span><span className="ml-6 h-7 flex items-center"
                                 ><svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -187,7 +187,7 @@ export default function News() {
                                     stroke-width="1.5"
                                     stroke="currentColor"
                                     aria-hidden="true"
-                                    class="rotate-0 h-6 w-6 transform"
+                                    className="rotate-0 h-6 w-6 transform"
                                 >
                                         <path
                                             stroke-linecap="round"
@@ -199,25 +199,25 @@ export default function News() {
                             </button>
                         </dt>
                     </div>
-                    <div class="relative p-6">
+                    <div className="relative p-6">
                         <div
-                            class="absolute inset-0 flex items-center"
+                            className="absolute inset-0 flex items-center"
                             aria-hidden="true"
                         >
-                            <div class="border-t border-gray-300 w-9/12 mx-auto"></div>
+                            <div className="border-t border-gray-300 w-9/12 mx-auto"></div>
                         </div>
                     </div>
-                    <div data-headlessui-state="" class="p-6 bg-gray-50">
-                        <dt class="text-lg">
+                    <div data-headlessui-state="" className="p-6 bg-gray-50">
+                        <dt className="text-lg">
                             <button
                                 id="headlessui-disclosure-button-9"
                                 type="button"
                                 aria-expanded="false"
                                 data-headlessui-state=""
-                                class="text-left w-full flex justify-between items-start text-gray-400"
+                                className="text-left w-full flex justify-between items-start text-gray-400"
                             >
-                                <span class="text-xl text-gray-600 font-semibold"
-                                >2019</span><span class="ml-6 h-7 flex items-center"
+                                <span className="text-xl text-gray-600 font-semibold"
+                                >2019</span><span className="ml-6 h-7 flex items-center"
                                 ><svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -225,7 +225,7 @@ export default function News() {
                                     stroke-width="1.5"
                                     stroke="currentColor"
                                     aria-hidden="true"
-                                    class="rotate-0 h-6 w-6 transform"
+                                    className="rotate-0 h-6 w-6 transform"
                                 >
                                         <path
                                             stroke-linecap="round"
@@ -237,25 +237,25 @@ export default function News() {
                             </button>
                         </dt>
                     </div>
-                    <div class="relative p-6">
+                    <div className="relative p-6">
                         <div
-                            class="absolute inset-0 flex items-center"
+                            className="absolute inset-0 flex items-center"
                             aria-hidden="true"
                         >
-                            <div class="border-t border-gray-300 w-9/12 mx-auto"></div>
+                            <div className="border-t border-gray-300 w-9/12 mx-auto"></div>
                         </div>
                     </div>
-                    <div data-headlessui-state="" class="p-6 bg-gray-50">
-                        <dt class="text-lg">
+                    <div data-headlessui-state="" className="p-6 bg-gray-50">
+                        <dt className="text-lg">
                             <button
                                 id="headlessui-disclosure-button-11"
                                 type="button"
                                 aria-expanded="false"
                                 data-headlessui-state=""
-                                class="text-left w-full flex justify-between items-start text-gray-400"
+                                className="text-left w-full flex justify-between items-start text-gray-400"
                             >
-                                <span class="text-xl text-gray-600 font-semibold"
-                                >2018</span><span class="ml-6 h-7 flex items-center"
+                                <span className="text-xl text-gray-600 font-semibold"
+                                >2018</span><span className="ml-6 h-7 flex items-center"
                                 ><svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -263,7 +263,7 @@ export default function News() {
                                     stroke-width="1.5"
                                     stroke="currentColor"
                                     aria-hidden="true"
-                                    class="rotate-0 h-6 w-6 transform"
+                                    className="rotate-0 h-6 w-6 transform"
                                 >
                                         <path
                                             stroke-linecap="round"
@@ -275,25 +275,25 @@ export default function News() {
                             </button>
                         </dt>
                     </div>
-                    <div class="relative p-6">
+                    <div className="relative p-6">
                         <div
-                            class="absolute inset-0 flex items-center"
+                            className="absolute inset-0 flex items-center"
                             aria-hidden="true"
                         >
-                            <div class="border-t border-gray-300 w-9/12 mx-auto"></div>
+                            <div className="border-t border-gray-300 w-9/12 mx-auto"></div>
                         </div>
                     </div>
-                    <div data-headlessui-state="" class="p-6 bg-gray-50">
-                        <dt class="text-lg">
+                    <div data-headlessui-state="" className="p-6 bg-gray-50">
+                        <dt className="text-lg">
                             <button
                                 id="headlessui-disclosure-button-13"
                                 type="button"
                                 aria-expanded="false"
                                 data-headlessui-state=""
-                                class="text-left w-full flex justify-between items-start text-gray-400"
+                                className="text-left w-full flex justify-between items-start text-gray-400"
                             >
-                                <span class="text-xl text-gray-600 font-semibold"
-                                >2017</span><span class="ml-6 h-7 flex items-center"
+                                <span className="text-xl text-gray-600 font-semibold"
+                                >2017</span><span className="ml-6 h-7 flex items-center"
                                 ><svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -301,7 +301,7 @@ export default function News() {
                                     stroke-width="1.5"
                                     stroke="currentColor"
                                     aria-hidden="true"
-                                    class="rotate-0 h-6 w-6 transform"
+                                    className="rotate-0 h-6 w-6 transform"
                                 >
                                         <path
                                             stroke-linecap="round"

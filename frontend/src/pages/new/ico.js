@@ -6,19 +6,17 @@ import React from "react";
 // import Status from "../../components/Status";
 // import BuyCard from "../../components/BuyCard";
 // import { useContractStatus } from "../../hooks/useContractStatus";
-import './new.css'
-import Header from "./components/header";
-import StakingRunNode from "./components/stakingRunNode";
-import Security from "./components/security";
-import HowItWorks from "./components/howItWorks";
-import Community from "./components/community";
-import News from "./components/news";
-import Team from "./components/team";
-import Dao from "./components/dao";
-import NodeOperator from "./components/nodeOperator";
-import Footer from "./components/footer";
+import './ico.css'
+import StakingRunNode from "../../components/stakingRunNode";
+import Security from "../../components/security";
+import HowItWorks from "../../components/howItWorks";
+import Community from "../../components/community";
+import News from "../../components/news";
+import Team from "../../components/team";
+import Dao from "../../components/dao";
+import NodeOperator from "../../components/nodeOperator";
 
-export default function NewPage() {
+export default function IcoPage() {
     // const [refresh, setRefresh] = useState(false)
     // const {
     //     totalVolume,
@@ -61,9 +59,8 @@ export default function NewPage() {
                 />
             </div>
             <div id="app" data-v-app="">
-                <div id="app" class="">
+                <div id="app" className="">
                     <div id="home">
-                        <Header />
                         <StakingRunNode />
                         <Security />
                         <HowItWorks />
@@ -72,7 +69,6 @@ export default function NewPage() {
                         <Team />
                         <Dao />
                         <NodeOperator />
-                        <Footer />
                     </div>
                 </div>
             </div>
