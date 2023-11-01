@@ -78,7 +78,7 @@ export default function IcoPage() {
                                 </div>
                                 <Connect />
                             </div>
-                            <div className="mt-5 pb-12 sm:pb-16">
+                            <div className="mt-10 pb-12 sm:pb-16">
                                 <div className="relative">
                                     <div className="absolute inset-0 h-1/2"></div>
                                     <div

@@ -19,7 +19,7 @@ export default function Footer() {
                         </p>
                         <div className="flex space-x-6">
                             <a
-                                href="#"
+                                href="https://rocketpulse.finance"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -42,7 +42,7 @@ export default function Footer() {
                                     ></path></svg>
                             </a>
                             <a
-                                href="#"
+                                href="https://rocketpulse.finance"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -64,7 +64,7 @@ export default function Footer() {
                                     ></path></svg>
                             </a>
                             <a
-                                href="#"
+                                href="https://rocketpulse.finance"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -88,7 +88,7 @@ export default function Footer() {
                                 </svg>
                             </a>
                             <a
-                                href="#"
+                                href="https://rocketpulse.finance"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -112,7 +112,7 @@ export default function Footer() {
                                 </svg>
                             </a>
                             <a
-                                href="#"
+                                href="https://rocketpulse.finance"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -136,7 +136,7 @@ export default function Footer() {
                                 </svg>
                             </a>
                             <a
-                                href="#"
+                                href="https://rocketpulse.finance"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -158,7 +158,7 @@ export default function Footer() {
                                 </svg>
                             </a>
                             <a
-                                href="#"
+                                href="https://rocketpulse.finance"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -196,7 +196,7 @@ export default function Footer() {
                                     className="mt-4 space-y-4">
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -204,7 +204,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -212,7 +212,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -220,7 +220,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -239,7 +239,7 @@ export default function Footer() {
                                     className="mt-4 space-y-4">
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -247,7 +247,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -255,7 +255,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -263,7 +263,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -284,7 +284,7 @@ export default function Footer() {
                                     className="mt-4 space-y-4">
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -292,7 +292,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -300,7 +300,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -308,7 +308,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -327,7 +327,7 @@ export default function Footer() {
                                     className="mt-4 space-y-4">
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -335,7 +335,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -343,7 +343,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="#"
+                                            href="https://rocketpulse.finance"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -358,7 +358,7 @@ export default function Footer() {
                     <p className="text-base text-gray-400 xl:text-center pb-5">
                         <span className="pr-4">
                             <a
-                                href="#"
+                                href="https://rocketpulse.finance"
                                 className="text-base xl:text-center text-gray-400 hover:text-gray-900"
                                 target="_blank"
                                 rel="noreferrer"
@@ -366,7 +366,7 @@ export default function Footer() {
                         </span>
                         <span className="pr-4"
                         ><a
-                            href="#"
+                            href="https://rocketpulse.finance"
                             className="text-base xl:text-center text-gray-400 hover:text-gray-900"
                             target="_blank"
                             rel="noreferrer"

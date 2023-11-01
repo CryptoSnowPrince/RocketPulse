@@ -1,6 +1,6 @@
 import { pulsechain, goerli } from "wagmi/chains";
 import eth_ic from "../assets/img/eth.png"
-import usdt_ic from "../assets/img/usdt.svg"
+// import usdt_ic from "../assets/img/usdt.svg"
 
 export const IS_PRODUCT_MODE = true // TODO
 
