@@ -66,10 +66,16 @@ export default function IcoPage() {
                     <div className="relative pt-6 pb-16 sm:pb-24">
                         <div className="mt-5 mx-auto max-w-7xl lg:px-4 px-1">
                             <div className="flex flex-row justify-items-center lg:justify-between gap-3">
-                                <img alt="img"
-                                    src={"/image/rocket.png"}
-                                    className="lg:w-auto w-1/5 lg:max-w-lg"
-                                />
+                                <div className="flex lg:flex-row lg:justify-items-right lg:gap-2">
+                                    <img alt="img"
+                                        src={"/image/rocket.png"}
+                                        className="lg:max-w-lg"
+                                    />
+                                    <img alt="img"
+                                        src={"/image/logo_string.png"}
+                                        className="hidden lg:flex w-0 lg:w-auto py-5 mx-3"
+                                    />
+                                </div>
                                 <Connect />
                             </div>
                             <div className="mt-5 pb-12 sm:pb-16">
