@@ -222,7 +222,7 @@ export default function BuyItem(props) {
                             <img src={props.token.logo} width={35} height={35} alt='token' />
                         </div>
                         <button
-                            className={`hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500  w-1/2 h-[50px] bg-gray-200/[0.1] text-xl border-1 ${pending ? `bg-gray-200/[0.5] border-yellow-700 text-gray-800` : `border-yellow-500 text-white`}`}
+                            className={`hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 w-1/2 h-[50px] bg-gray-200/[0.1] text-xl border-1 ${pending ? `bg-gray-200/[0.5] border-yellow-700 text-gray-800` : `border-yellow-500 text-white`}`}
                             disabled={pending}
                             onClick={handleBtn}
                         >
