@@ -206,14 +206,14 @@ export default function BuyItem(props) {
     return (
         <>
             {
-                props && <div className="w-full lg:w-11/12 py-2 bg-black/[0.95] rounded-2xl border-2 border-gray-700 flex flex-col justify-center text-center px-2 my-3">
+                props && <div className="w-full lg:w-11/12 py-2 bg-gray-200/[0.1] flex flex-col justify-center text-center px-2 my-3">
                     <div className="w-full px-3 flex flex-row items-center justify-between text-lg text-center">
-                        <label className="">You contribute {props.token.name}</label>
+                        <label className="">You pay {props.token.name}</label>
                     </div>
-                    <div className="w-full py-2 bg-black/[0.95] flex flex-row justify-center text-center px-2 mt-2 gap-2">
-                        <div className="w-1/2 h-[50px] px-3 rounded-xl border-2 border-gray-700 flex flex-row items-center justify-between text-2xl text-center gap-2">
+                    <div className="w-full py-2 bg-gray-200/[0.1] flex flex-row justify-center text-center px-2 mt-2 gap-2">
+                        <div className="w-1/2 h-[50px] px-3 bg-gray-200/[0.1] flex flex-row items-center justify-between text-2xl text-center gap-2">
                             <input
-                                className={`w-full bg-transparent focus:border-0 active:border-0 focus:outline-0 ${pending ? `text-gray-800` : `text-white`}`}
+                                className={`w-full bg-transparent border-0 focus:border-0 active:border-0 focus:outline-0 ${pending ? `text-gray-800` : `text-white`}`}
                                 placeholder="0"
                                 value={tokenAmount}
                                 disabled={pending}
@@ -222,7 +222,7 @@ export default function BuyItem(props) {
                             <img src={props.token.logo} width={35} height={35} alt='token' />
                         </div>
                         <button
-                            className={`w-1/2 h-[50px] bg-black/[0.95] text-xl rounded-xl border-2 ${pending ? `border-yellow-700 text-gray-800` : `border-yellow-500 text-white`}`}
+                            className={`hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500  w-1/2 h-[50px] bg-gray-200/[0.1] text-xl border-1 ${pending ? `bg-gray-200/[0.5] border-yellow-700 text-gray-800` : `border-yellow-500 text-white`}`}
                             disabled={pending}
                             onClick={handleBtn}
                         >
@@ -243,6 +243,25 @@ export default function BuyItem(props) {
                                 }}
                             >Max</button>
                         </div>
+                    </div>
+                    <div className="w-full py-2 bg-gray-200/[0.1] flex flex-row justify-center text-center px-2 mt-2 gap-2">
+                        <div className="w-1/2 h-[50px] px-3 bg-gray-200/[0.1] flex flex-row items-center justify-between text-2xl text-center gap-2">
+                            <input
+                                className={`w-full bg-transparent border-0 focus:border-0 active:border-0 focus:outline-0 ${pending ? `text-gray-800` : `text-white`}`}
+                                placeholder="0"
+                                value={tokenAmount}
+                                disabled={pending}
+                                onChange={(e) => setTokenAmount(e.target.value)}
+                            />
+                            <img src={props.token.logo} width={35} height={35} alt='token' />
+                        </div>
+                        <button
+                            className={`w-1/2 h-[50px] bg-gray-200/[0.1] text-xl border-1 ${pending ? `border-yellow-700 text-gray-800` : `border-yellow-500 text-white`}`}
+                            disabled={pending}
+                            onClick={handleBtn}
+                        >
+                            {btnMsg}
+                        </button>
                     </div>
                 </div>
             }

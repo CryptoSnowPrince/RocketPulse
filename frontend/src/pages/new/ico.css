@@ -868,7 +868,7 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .from-rporange-bg {
-  --tw-gradient-from: #fda264 var(--tw-gradient-from-position);
+  /* --tw-gradient-from: #fda264 var(--tw-gradient-from-position); */
   --tw-gradient-to: rgb(253 162 100 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -897,7 +897,7 @@ select {
   --tw-gradient-to: #dc2626 var(--tw-gradient-to-position);
 }
 .to-rppink-bg {
-  --tw-gradient-to: #fd6461 var(--tw-gradient-to-position);
+  /* --tw-gradient-to: #fd6461 var(--tw-gradient-to-position); */
 }
 .to-yellow-200 {
   --tw-gradient-to: #fef08a var(--tw-gradient-to-position);
@@ -2178,13 +2178,10 @@ select {
   background: white;
 }
 .bg-header {
-  background: url('https://rocketpool.net/assets/header-bg-wide-3cd4678c.webp')
-    fixed center 0px no-repeat;
-  padding-bottom: 380px;
+  padding-bottom: 350px;
 }
 .full {
-  background: url('https://rocketpool.net/assets/header-bg-full-9a1e3299.webp')
-    fixed center 0px no-repeat;
+  /* background: url('https://rocketpool.net/assets/header-bg-full-9a1e3299.webp') fixed center 0px no-repeat; */
 }
 .bg-radial {
   background: radial-gradient(
@@ -2200,7 +2197,7 @@ select {
 .bg-clouds-top {
   width: 100%;
   height: 312px;
-  background: url('https://rocketpool.net/assets/cloud-ec3426ef.webp') center
+  background: url('../../assets/img/cloud.png') center
     center repeat-x;
   position: absolute;
   left: 50%;
@@ -2210,7 +2207,7 @@ select {
 .bg-clouds-bottom {
   width: 100%;
   height: 312px;
-  background: url('https://rocketpool.net/assets/cloud-ec3426ef.webp') center
+  background: url('../../assets/img/cloud.png') center
     center repeat-x;
   position: absolute;
   left: 50%;
@@ -2220,12 +2217,13 @@ select {
 .rocket {
   position: absolute;
   left: 50%;
-  bottom: 18%;
-  margin-left: -74px;
+  bottom: 17%;
+  margin-left: -140px;
   z-index: 3;
-  width: 137px;
-  height: 255px;
-  background-image: url('https://rocketpool.net/assets/rocket-be84b056.webp');
+  width: 275px;
+  height: 270px;
+  background-size: cover;
+  background-image: url('../../assets/img/rocket_letter.png');
 }
 .trail {
   position: absolute;

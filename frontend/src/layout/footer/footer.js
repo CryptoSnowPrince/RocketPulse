@@ -11,15 +11,15 @@ export default function Footer() {
                     <div className="space-y-8 xl:col-span-1">
                         <img
                             className="h-10"
-                            src="data:image/webp;base64,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"
+                            src="/image/rocket.png"
                             alt="Rocket Pool"
                         />
                         <p className="text-gray-500 text-base">
-                            Decentralised Ethereum Staking Protocol
+                            Decentralised PLS Staking Protocol
                         </p>
                         <div className="flex space-x-6">
                             <a
-                                href="https://discord.gg/rocketpool"
+                                href="#"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -42,7 +42,7 @@ export default function Footer() {
                                     ></path></svg>
                             </a>
                             <a
-                                href="https://medium.com/rocket-pool"
+                                href="#"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -64,7 +64,7 @@ export default function Footer() {
                                     ></path></svg>
                             </a>
                             <a
-                                href="https://twitter.com/Rocket_Pool"
+                                href="#"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -88,7 +88,7 @@ export default function Footer() {
                                 </svg>
                             </a>
                             <a
-                                href="https://github.com/rocket-pool"
+                                href="#"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -112,7 +112,7 @@ export default function Footer() {
                                 </svg>
                             </a>
                             <a
-                                href="https://dao.rocketpool.net/"
+                                href="#"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -136,7 +136,7 @@ export default function Footer() {
                                 </svg>
                             </a>
                             <a
-                                href="https://youtube.com/rocketpool"
+                                href="#"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -158,7 +158,7 @@ export default function Footer() {
                                 </svg>
                             </a>
                             <a
-                                href="https://www.reddit.com/r/rocketpool"
+                                href="#"
                                 className="text-gray-400 hover:text-gray-500"
                                 target="_blank"
                                 rel="noreferrer"
@@ -196,7 +196,7 @@ export default function Footer() {
                                     className="mt-4 space-y-4">
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/guides/staking/overview.html"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -204,27 +204,27 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/guides/staking/overview.html#how-eth2-staking-works"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
-                                        >ETH2 Staking</a>
+                                        >PLS Staking</a>
                                     </li>
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/guides/staking/overview.html#how-rocket-pool-works"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
-                                        >Rocket Pool Staking</a>
+                                        >Rocket Pulse Staking</a>
                                     </li>
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/guides/staking/overview.html#the-reth-token"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
-                                        >rEth Token</a>
+                                        >RPLS Token</a>
                                     </li>
                                 </ul>
                             </div>
@@ -239,7 +239,7 @@ export default function Footer() {
                                     className="mt-4 space-y-4">
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/guides/node/responsibilities.html#how-rocket-pool-nodes-work"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -247,7 +247,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/guides/node/local/hardware.html"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -255,7 +255,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/guides/node/vps/providers.html"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -263,11 +263,11 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/guides/node/eth-clients.html"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
-                                        >Install Rocket Pool</a>
+                                        >Install Rocket Pulse</a>
                                     </li>
                                 </ul>
                             </div>
@@ -284,7 +284,7 @@ export default function Footer() {
                                     className="mt-4 space-y-4">
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/overview/"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -292,7 +292,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -300,7 +300,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/guides/"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -308,7 +308,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://docs.rocketpool.net/developers/"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -327,7 +327,7 @@ export default function Footer() {
                                     className="mt-4 space-y-4">
                                     <li>
                                         <a
-                                            href="https://dao.rocketpool.net/"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -335,7 +335,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://vote.rocketpool.net/"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -343,7 +343,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://delegates.rocketpool.net/"
+                                            href="#"
                                             className="text-base text-gray-500 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
@@ -358,7 +358,7 @@ export default function Footer() {
                     <p className="text-base text-gray-400 xl:text-center pb-5">
                         <span className="pr-4">
                             <a
-                                href="https://rocketpool.net/files/privacy-policy.pdf"
+                                href="#"
                                 className="text-base xl:text-center text-gray-400 hover:text-gray-900"
                                 target="_blank"
                                 rel="noreferrer"
@@ -366,7 +366,7 @@ export default function Footer() {
                         </span>
                         <span className="pr-4"
                         ><a
-                            href="https://rocketpool.net/files/terms-of-service.pdf"
+                            href="#"
                             className="text-base xl:text-center text-gray-400 hover:text-gray-900"
                             target="_blank"
                             rel="noreferrer"
@@ -374,7 +374,7 @@ export default function Footer() {
                         </span>
                     </p>
                     <p className="text-base text-gray-400 xl:text-center">
-                        <span className="pr-4">© Rocket Pool Pty Ltd.</span>
+                        <span className="pr-4">© Rocket Pulse Pty Ltd.</span>
                     </p>
                 </div>
             </div>

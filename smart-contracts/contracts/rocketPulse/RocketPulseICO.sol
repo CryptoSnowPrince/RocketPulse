@@ -19,6 +19,7 @@ contract RocketPulseICO is OwnableUpgradeable {
     mapping(address => bool) public paymentTokenList; // token => allow
 
     uint256 public totalSoldAmount;
+    uint256 public totalClaimedAmount;
     uint256 public totalFundsInUSD;
     mapping(address => uint256) public tokenBuyAmount;
     mapping(address => uint256) public tokenClaimedAmount;
@@ -246,6 +247,7 @@ contract RocketPulseICO is OwnableUpgradeable {
         SafeERC20.safeTransfer(IERC20(token), msg.sender, pendingAmount);
 
         tokenClaimedAmount[msg.sender] = tokenBuyAmount[msg.sender];
+        totalClaimedAmount += pendingAmount;
 
         emit LogClaimToken(msg.sender, pendingAmount);
     }

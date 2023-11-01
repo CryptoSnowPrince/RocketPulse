@@ -36,7 +36,7 @@ export default function Header() {
             >Footer
             </a>
             <div
-                className="bg-gradient-to-r from-rporange-bg to-rppink-bg"
+                className=""
                 id="header"
             >
                 <div className="bg-header relative overflow-hidden">

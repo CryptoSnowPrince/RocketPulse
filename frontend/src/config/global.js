@@ -21,14 +21,14 @@ export const tokens_mainnet = [
         logo: eth_ic,
         isNative: true
     },
-    {
-        name: 'USDT',
-        address: '0xdac17f958d2ee523a2206206994597c13d831ec7',
-        limit: 1000,
-        decimals: 6,
-        logo: usdt_ic,
-        isNative: false
-    }
+    // {
+    //     name: 'USDT',
+    //     address: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+    //     limit: 1000,
+    //     decimals: 6,
+    //     logo: usdt_ic,
+    //     isNative: false
+    // }
 ]
 
 export const tokens_testnet = [
@@ -40,14 +40,14 @@ export const tokens_testnet = [
         logo: eth_ic,
         isNative: true
     },
-    {
-        name: 'USDT',
-        address: '0x10cB7737c5A547B71C25c3f2dbF12A1BD6374cf4',
-        limit: 1000,
-        decimals: 6,
-        logo: usdt_ic,
-        isNative: false
-    }
+    // {
+    //     name: 'USDT',
+    //     address: '0x10cB7737c5A547B71C25c3f2dbF12A1BD6374cf4',
+    //     limit: 1000,
+    //     decimals: 6,
+    //     logo: usdt_ic,
+    //     isNative: false
+    // }
 ]
 
 export const global = {

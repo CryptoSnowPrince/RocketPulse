@@ -4,16 +4,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import logoImg from "./assets/img/logo.png";
-
 import MainLayout from "./layout/MainLayout";
 
 // import MainPage from "./pages";
 import IcoPage from "./pages/new/ico";
 
 const renderLoader = () => (
-  <div className="w-full h-[calc(100vh-100px)] flex justify-center items-center">
-    <img src={logoImg} alt="logo" className="animate-pulse" />
+  <div className="w-full h-[calc(100vh-100px)] flex justify-center items-center bg-gradient-to-t from-indigo-500 via-purple-400 to-pink-300">
+    <img src={'./image/loading.png'} alt="logo" className="animate-pulse" />
   </div>
 );
 
