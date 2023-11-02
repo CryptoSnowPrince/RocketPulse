@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <footer
-            className='w-full bg-white pb-20'
+            className='w-full bg-white pb-1'
             aria-labelledby="footer-heading"
             id="footer"
         >
@@ -14,13 +14,13 @@ export default function Footer() {
                             src="/image/rocket.png"
                             alt="Rocket Pool"
                         />
-                        <p className="text-gray-500 text-base">
+                        <p className="text-black">
                             Decentralised PLS Staking Protocol
                         </p>
                         <div className="flex space-x-6">
                             <a
                                 href="https://rocketpulse.finance"
-                                className="text-gray-400 hover:text-gray-500"
+                                className="text-black hover:text-gray-700"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -43,7 +43,7 @@ export default function Footer() {
                             </a>
                             <a
                                 href="https://rocketpulse.finance"
-                                className="text-gray-400 hover:text-gray-500"
+                                className="text-black hover:text-gray-700"
                                 target="_blank"
                                 rel="noreferrer"
                             ><span className="sr-only">Medium</span>
@@ -65,7 +65,7 @@ export default function Footer() {
                             </a>
                             <a
                                 href="https://rocketpulse.finance"
-                                className="text-gray-400 hover:text-gray-500"
+                                className="text-black hover:text-gray-700"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -89,7 +89,7 @@ export default function Footer() {
                             </a>
                             <a
                                 href="https://rocketpulse.finance"
-                                className="text-gray-400 hover:text-gray-500"
+                                className="text-black hover:text-gray-700"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -113,7 +113,7 @@ export default function Footer() {
                             </a>
                             <a
                                 href="https://rocketpulse.finance"
-                                className="text-gray-400 hover:text-gray-500"
+                                className="text-black hover:text-gray-700"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -137,7 +137,7 @@ export default function Footer() {
                             </a>
                             <a
                                 href="https://rocketpulse.finance"
-                                className="text-gray-400 hover:text-gray-500"
+                                className="text-black hover:text-gray-700"
                                 target="_blank"
                                 rel="noreferrer"
                             ><span className="sr-only">Youtube</span><svg
@@ -159,7 +159,7 @@ export default function Footer() {
                             </a>
                             <a
                                 href="https://rocketpulse.finance"
-                                className="text-gray-400 hover:text-gray-500"
+                                className="text-black hover:text-gray-700"
                                 target="_blank"
                                 rel="noreferrer"
                             ><span className="sr-only">Reddit
@@ -187,7 +187,7 @@ export default function Footer() {
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
                                 <h3
-                                    className="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+                                    className="text-sm font-semibold text-black tracking-wider uppercase"
                                 >
                                     Staking
                                 </h3>
@@ -197,7 +197,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Overview</a>
@@ -205,7 +205,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >PLS Staking</a>
@@ -213,7 +213,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Rocket Pulse Staking</a>
@@ -221,7 +221,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >RPLS Token</a>
@@ -230,7 +230,7 @@ export default function Footer() {
                             </div>
                             <div className="mt-12 md:mt-0">
                                 <h3
-                                    className="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+                                    className="text-sm font-semibold text-black tracking-wider uppercase"
                                 >
                                     Node Operation
                                 </h3>
@@ -240,7 +240,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >How it works</a>
@@ -248,7 +248,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Local Nodes</a>
@@ -256,7 +256,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Cloud Nodes</a>
@@ -264,7 +264,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Install Rocket Pulse</a>
@@ -275,7 +275,7 @@ export default function Footer() {
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
                                 <h3
-                                    className="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+                                    className="text-sm font-semibold text-black tracking-wider uppercase"
                                 >
                                     Learn
                                 </h3>
@@ -285,7 +285,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Introduction</a>
@@ -293,7 +293,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Explainer Series</a>
@@ -301,7 +301,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Guides</a>
@@ -309,7 +309,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Developers</a>
@@ -318,7 +318,7 @@ export default function Footer() {
                             </div>
                             <div className="mt-12 md:mt-0">
                                 <h3
-                                    className="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+                                    className="text-sm font-semibold text-black tracking-wider uppercase"
                                 >
                                     Governance
                                 </h3>
@@ -328,7 +328,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Forum</a>
@@ -336,7 +336,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Proposals</a>
@@ -344,7 +344,7 @@ export default function Footer() {
                                     <li>
                                         <a
                                             href="https://rocketpulse.finance"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-700 hover:text-gray-900"
                                             target="_blank"
                                             rel="noreferrer"
                                         >Delegates</a>
@@ -355,11 +355,11 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="mt-12 border-t border-gray-200 pt-8">
-                    <p className="text-base text-gray-400 xl:text-center pb-5">
+                    <p className="text-base text-black xl:text-center pb-5">
                         <span className="pr-4">
                             <a
                                 href="https://rocketpulse.finance"
-                                className="text-base xl:text-center text-gray-400 hover:text-gray-900"
+                                className="text-base xl:text-center text-black hover:text-gray-900"
                                 target="_blank"
                                 rel="noreferrer"
                             >Privacy Policy</a>
@@ -367,13 +367,13 @@ export default function Footer() {
                         <span className="pr-4"
                         ><a
                             href="https://rocketpulse.finance"
-                            className="text-base xl:text-center text-gray-400 hover:text-gray-900"
+                            className="text-base xl:text-center text-black hover:text-gray-900"
                             target="_blank"
                             rel="noreferrer"
                         >Terms of Service</a>
                         </span>
                     </p>
-                    <p className="text-base text-gray-400 xl:text-center">
+                    <p className="text-base text-black xl:text-center">
                         <span className="pr-4">© Rocket Pulse Pty Ltd.</span>
                     </p>
                 </div>
