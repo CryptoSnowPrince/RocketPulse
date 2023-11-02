@@ -1,4 +1,4 @@
-import { pulsechain, goerli } from "wagmi/chains";
+import { pulsechain, pulsechainV4 } from "wagmi/chains";
 import rpls_ic from "../assets/img/rpls.png"
 import pls_ic from "../assets/img/pulse.png"
 import dai_ic from "../assets/img/dai.png"
@@ -7,12 +7,12 @@ import usdt_ic from "../assets/img/usdt.svg"
 
 export const IS_PRODUCT_MODE = false // TODO
 
-export const contracts_mainnet = { // TODO Mainnet ethereum
+export const contracts_mainnet = { // TODO Pulsechain Mainnet
     Main: "0xC8d994df027105d8e245659B2934d534F34b18CE",
 };
 
-export const contracts_testnet = { // TODO Testnet goerli
-    Main: "0xC8d994df027105d8e245659B2934d534F34b18CE",
+export const contracts_testnet = { // TODO V4Pulsechain Testnet
+    Main: "0x269F2acadDd26d377135E581e27bF40Cf4f5e1b6",
 };
 
 export const projectToken_mainnet = {
@@ -25,7 +25,7 @@ export const projectToken_mainnet = {
 
 export const projectToken_testnet = {
     name: 'RPLS',
-    address: '0xd2A37C328059EcA94943db0A3E24425E57cCcCDA',
+    address: '0x135Eeb2ED1B006d900F091250Bd85907B652B18f',
     decimals: 18,
     logo: rpls_ic,
     isNative: true
@@ -64,7 +64,7 @@ export const tokens_mainnet = [
 
 export const tokens_testnet = [
     {
-        name: 'ETH',
+        name: 'v4PLS',
         address: '0x0000000000000000000000000000000000000000',
         decimals: 18,
         logo: pls_ic,
@@ -72,21 +72,21 @@ export const tokens_testnet = [
     },
     {
         name: 'DAI',
-        address: '0x958Fa6BaC2D29D7B7aDcf75e1C85549147072182',
+        address: '0x5e1100ea18F918a4e9AB70694c6c554e1E940D32',
         decimals: 18,
         logo: dai_ic,
         isNative: false
     },
     {
         name: 'USDC',
-        address: '0x26a24Ed2a666D181e37E1Dd0dF97257b3F4B214E',
+        address: '0x38AcAA98Db174cEE218A33635322C19cC1155d20',
         decimals: 6,
         logo: usdc_ic,
         isNative: false
     },
     {
         name: 'USDT',
-        address: '0x10cB7737c5A547B71C25c3f2dbF12A1BD6374cf4',
+        address: '0xEe8d287B844959ADe40d718Dc23077ba920e2f07',
         decimals: 6,
         logo: usdt_ic,
         isNative: false
@@ -97,7 +97,7 @@ export const global = {
     CONTRACTS: IS_PRODUCT_MODE ? contracts_mainnet : contracts_testnet,
     TOKENS: IS_PRODUCT_MODE ? tokens_mainnet : tokens_testnet,
     PROJECT_TOKEN: IS_PRODUCT_MODE ? projectToken_mainnet : projectToken_testnet,
-    chain: IS_PRODUCT_MODE ? pulsechain : goerli,
+    chain: IS_PRODUCT_MODE ? pulsechain : pulsechainV4,
     usdDecimals: 6,
     totalRounds: 24,
     totalVolume: 60_000_000,

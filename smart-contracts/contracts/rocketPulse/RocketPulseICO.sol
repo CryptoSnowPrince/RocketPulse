@@ -33,10 +33,10 @@ contract RocketPulseICO is OwnableUpgradeable {
     // Construct
     function initialize(
         address _token,
-        address _dai, // address:0xefd766ccb38eaf1dfd701853bfce31359239f305 decimals:18
-        address _usdc, // address:0x15d38573d2feeb82e7ad5187ab8c1d52810b1f07 decimals:6
-        address _usdt, // address:0x0cb6f5a34ad42ec934882a05265a7d5f59b51a2f decimals:6
-        address _plsDaiPair, // address: 0xE56043671df55dE5CDf8459710433C10324DE0aE,
+        address _dai,
+        address _usdc,
+        address _usdt,
+        address _plsDaiPair,
         uint256 _startTime,
         uint256 _allocatedAmount
     ) public initializer {

@@ -11,7 +11,7 @@ contract RocketPulseRPLSToken is ERC20Burnable, Ownable {
     // Construct
     constructor() ERC20("Rocket Pulse RPLS Token", "RPLS") Ownable(msg.sender) {
         // Mint the 180m tokens
-        _mint(address(this), 180 * 10 ** 6 * 10 ** 18);
+        _mint(msg.sender, 180 * 10 ** 6 * 10 ** 18);
     }
 
     function mint(address account, uint256 value) external onlyOwner {
