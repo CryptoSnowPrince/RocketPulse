@@ -104,7 +104,7 @@ export default function IcoPage() {
                             projectTokenBalance={projectTokenBalance}
                             nextRoundStartTime={nextRoundStartTime}
                         />
-                        <div className="lg:w-11/12 w-full flex lg:flex-row flex-col justify-center gap-5 items-center mx-auto lg:px-2 my-5 lg:mt-[20px]">
+                        <div className="w-full flex lg:flex-row flex-col justify-between gap-5 items-center mx-auto lg:px-2 my-5 lg:mt-[20px]">
                             <div className="hidden lg:flex w-1/3 opacity-50">
                                 <Lottie
                                     options={{
@@ -119,7 +119,7 @@ export default function IcoPage() {
                                     width={280}
                                 />
                             </div>
-                            <div className="w-min-[400]">
+                            <div className="">
                                 <BuyCard
                                     setRefresh={setRefresh}
                                     refresh={refresh}
@@ -142,8 +142,8 @@ export default function IcoPage() {
                                             preserveAspectRatio: "xMidYMid slice"
                                         }
                                     }}
-                                    height={500}
-                                    width={500}
+                                    height={400}
+                                    width={400}
                                 />
                             </div>
                         </div>
