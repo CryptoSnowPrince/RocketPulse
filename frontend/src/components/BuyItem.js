@@ -264,7 +264,12 @@ export default function BuyItem(props) {
                                 }
                             }}
                         />
-                        <button className="hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-indigo-500 w-auto bg-gray-200/[0.1] gap-1 px-2 py-1 flex flex-row justify-end text-center items-center" data-modal-target="default-modal" data-modal-toggle="default-modal" type="button">
+                        <button
+                            className="hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-indigo-500 w-auto bg-gray-200/[0.1] gap-1 px-2 py-1 flex flex-row justify-end text-center items-center"
+                            disabled={pending}
+                            data-modal-target="default-modal"
+                            data-modal-toggle="default-modal"
+                            type="button">
                             <img src={token.logo} width={35} height={35} alt='token' />
                             <label>{token.name}</label>
                             <FontAwesomeIcon icon={faChevronDown} size="sm" />
@@ -310,7 +315,10 @@ export default function BuyItem(props) {
                                 }
                             }}
                         />
-                        <button className="w-auto bg-gray-200/[0.1] gap-1 px-2 py-1 flex flex-row justify-end text-center items-center" type="button">
+                        <button
+                            disabled={pending}
+                            className="w-auto bg-gray-200/[0.1] gap-1 px-2 py-1 flex flex-row justify-end text-center items-center"
+                            type="button">
                             <img src={global.PROJECT_TOKEN.logo} width={35} height={35} alt='token' />
                             <label className="">{global.PROJECT_TOKEN.name}</label>
                         </button>
