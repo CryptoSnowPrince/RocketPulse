@@ -2238,10 +2238,10 @@ select {
 }
 @keyframes bgslide {
   0% {
-    transform: translateZ(0) translate(-50%);
+    transform: translate3d(0, -1130px, 0) translate(-50%);
   }
   to {
-    transform: translate3d(0, -1130px, 0) translate(-50%);
+    transform: translateZ(0) translate(-50%);
   }
 }
 .bg-fx {
@@ -2255,7 +2255,7 @@ select {
   background-repeat: repeat-y;
   background-image: url('../../assets/img/bg-middle-fx.webp');
   opacity: 0.15;
-  animation: bgslide 70s linear infinite;
+  animation: bgslide 3s linear infinite;
   transition: opacity 1s;
 }
 .bg-staking {

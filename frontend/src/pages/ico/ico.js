@@ -7,6 +7,9 @@ import Status from "../../components/Status";
 import BuyCard from "../../components/BuyCard";
 import { useContractStatus } from "../../hooks/useContractStatus";
 import Connect from "../../components/Connect";
+import Lottie from 'react-lottie';
+import rocketAnimation from '../../assets/lottie/rocket.json'
+import factoryAnimation from '../../assets/lottie/factory.json'
 import './ico.css'
 // import StakingRunNode from "../../components/stakingRunNode";
 // import Security from "../../components/security";
@@ -101,7 +104,21 @@ export default function IcoPage() {
                             projectTokenBalance={projectTokenBalance}
                             nextRoundStartTime={nextRoundStartTime}
                         />
-                        <div className="lg:w-5/6 w-full flex lg:flex-row flex-col justify-center gap-5 items-center mx-auto lg:px-2 my-5 lg:mt-[20px]">
+                        <div className="lg:w-11/12 w-full flex lg:flex-row flex-col justify-center gap-5 items-center mx-auto lg:px-2 my-5 lg:mt-[20px]">
+                            <div className="hidden lg:flex w-1/3 opacity-50">
+                                <Lottie
+                                    options={{
+                                        loop: true,
+                                        autoplay: true,
+                                        animationData: rocketAnimation,
+                                        rendererSettings: {
+                                            preserveAspectRatio: "xMidYMid slice"
+                                        }
+                                    }}
+                                    height={380}
+                                    width={280}
+                                />
+                            </div>
                             <BuyCard
                                 setRefresh={setRefresh}
                                 refresh={refresh}
@@ -113,6 +130,20 @@ export default function IcoPage() {
                                 totalSoldAmount={totalSoldAmount}
                                 currentTokenPrice={currentTokenPrice}
                             />
+                            <div className="hidden lg:flex w-1/3 opacity-80">
+                                <Lottie
+                                    options={{
+                                        loop: true,
+                                        autoplay: true,
+                                        animationData: factoryAnimation,
+                                        rendererSettings: {
+                                            preserveAspectRatio: "xMidYMid slice"
+                                        }
+                                    }}
+                                    height={500}
+                                    width={500}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
