@@ -119,17 +119,19 @@ export default function IcoPage() {
                                     width={280}
                                 />
                             </div>
-                            <BuyCard
-                                setRefresh={setRefresh}
-                                refresh={refresh}
-                                payTokenBalance={payTokenBalance}
-                                payTokenAllowance={payTokenAllowance}
-                                ethBalance={ethBalance}
-                                nextRoundStartTime={nextRoundStartTime}
-                                roundNumber={roundNumber}
-                                totalSoldAmount={totalSoldAmount}
-                                currentTokenPrice={currentTokenPrice}
-                            />
+                            <div className="w-min-[400]">
+                                <BuyCard
+                                    setRefresh={setRefresh}
+                                    refresh={refresh}
+                                    payTokenBalance={payTokenBalance}
+                                    payTokenAllowance={payTokenAllowance}
+                                    ethBalance={ethBalance}
+                                    nextRoundStartTime={nextRoundStartTime}
+                                    roundNumber={roundNumber}
+                                    totalSoldAmount={totalSoldAmount}
+                                    currentTokenPrice={currentTokenPrice}
+                                />
+                            </div>
                             <div className="hidden lg:flex w-1/3 opacity-80">
                                 <Lottie
                                     options={{
