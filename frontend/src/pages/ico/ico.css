@@ -2217,7 +2217,7 @@ select {
 .rocket {
   position: absolute;
   left: 50%;
-  bottom: 17%;
+  bottom: 12%;
   margin-left: -140px;
   z-index: 3;
   width: 275px;
@@ -2253,7 +2253,7 @@ select {
   width: 745px;
   background-position: center center;
   background-repeat: repeat-y;
-  background-image: url('https://rocketpool.net/assets/bg-middle-653045e5.webp');
+  background-image: url('../../assets/img/bg-middle-fx.webp');
   opacity: 0.15;
   animation: bgslide 70s linear infinite;
   transition: opacity 1s;

@@ -19,10 +19,8 @@ contract RocketPulseICO is OwnableUpgradeable {
     mapping(address => bool) public paymentTokenList; // token => allow
 
     uint256 public totalSoldAmount;
-    uint256 public totalClaimedAmount;
     uint256 public totalFundsInUSD;
     mapping(address => uint256) public tokenBuyAmount;
-    mapping(address => uint256) public tokenClaimedAmount;
 
     event LogBuyToken(
         address indexed user,
@@ -30,7 +28,6 @@ contract RocketPulseICO is OwnableUpgradeable {
         uint256 payTokenAmount,
         uint256 buyTokenAmount
     );
-    event LogClaimToken(address indexed user, uint256 amount);
     event LogSetTokenList(address indexed token, bool isAllow);
 
     // Construct
@@ -67,6 +64,16 @@ contract RocketPulseICO is OwnableUpgradeable {
         if (deltaDays > 25) return 25;
 
         return deltaDays - 1;
+    }
+
+    function getRoundStartTime(
+        uint256 roundNumber
+    ) external view returns (uint256) {
+        if (roundNumber < 2) return startTime;
+
+        if (roundNumber > 24) roundNumber = 24;
+
+        return startTime + (1 + roundNumber) * 1 days;
     }
 
     function getCurrentTokenPrice() public view returns (uint256) {
@@ -124,22 +131,22 @@ contract RocketPulseICO is OwnableUpgradeable {
 
     function getUsdAmount(
         address paymentToken,
-        uint256 tokenAmount // usd decimals is 6
+        uint256 payTokenAmount // usd decimals is 6
     ) public view returns (uint256) {
         // PLS
         if (paymentToken == address(0)) {
             (uint112 r0, uint112 r1, ) = IPair(plsDaiPair).getReserves();
             uint256 dicimalExp = 10 ** IERC20Metadata(daiToken).decimals();
             if (daiToken == IPair(plsDaiPair).token0()) {
-                return (((r0 * tokenAmount) / r1) * 10 ** 6) / dicimalExp;
+                return (((r0 * payTokenAmount) / r1) * 10 ** 6) / dicimalExp;
             } else {
-                return (((r1 * tokenAmount) / r0) * 10 ** 6) / dicimalExp;
+                return (((r1 * payTokenAmount) / r0) * 10 ** 6) / dicimalExp;
             }
         }
         // Stable
         else {
             uint256 dicimalExp = 10 ** IERC20Metadata(paymentToken).decimals();
-            return (tokenAmount * 10 ** 6) / dicimalExp;
+            return (payTokenAmount * 10 ** 6) / dicimalExp;
         }
     }
 
@@ -157,13 +164,14 @@ contract RocketPulseICO is OwnableUpgradeable {
 
         uint256 tokenPrice = getCurrentTokenPrice();
         uint256 dicimalExp = 10 ** IERC20Metadata(token).decimals();
-        uint256 tokenAmount = (usdAmount * dicimalExp) / tokenPrice;
+        uint256 outAmount = (usdAmount * dicimalExp) / tokenPrice;
 
-        totalSoldAmount += tokenAmount;
+        totalSoldAmount += outAmount;
 
-        tokenBuyAmount[msg.sender] += tokenAmount;
+        tokenBuyAmount[msg.sender] += outAmount;
 
-        emit LogBuyToken(msg.sender, inToken, inAmount, tokenAmount);
+        SafeERC20.safeTransfer(IERC20(token), msg.sender, outAmount);
+        emit LogBuyToken(msg.sender, inToken, inAmount, outAmount);
     }
 
     function _buyTokenExactOut(
@@ -182,6 +190,7 @@ contract RocketPulseICO is OwnableUpgradeable {
 
         uint256 inAmount = getPaymentTokenAmount(inToken, usdAmount);
 
+        SafeERC20.safeTransfer(IERC20(token), msg.sender, outAmount);
         emit LogBuyToken(msg.sender, inToken, inAmount, outAmount);
 
         return inAmount;
@@ -229,27 +238,6 @@ contract RocketPulseICO is OwnableUpgradeable {
             address(this),
             payAmount
         );
-    }
-
-    function claimToken() external {
-        require(
-            getRoundNumber() > 24 || totalSoldAmount >= allocatedAmount,
-            "IN_ROUND"
-        );
-        require(
-            tokenBuyAmount[msg.sender] > tokenClaimedAmount[msg.sender],
-            "NO_PENDING"
-        );
-
-        uint256 pendingAmount = tokenBuyAmount[msg.sender] -
-            tokenClaimedAmount[msg.sender];
-
-        SafeERC20.safeTransfer(IERC20(token), msg.sender, pendingAmount);
-
-        tokenClaimedAmount[msg.sender] = tokenBuyAmount[msg.sender];
-        totalClaimedAmount += pendingAmount;
-
-        emit LogClaimToken(msg.sender, pendingAmount);
     }
 
     function SetTokenList(address _token, bool _isAllow) public onlyOwner {

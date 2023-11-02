@@ -7,7 +7,10 @@ export const trimAddress = (addr) => {
 
 export async function setData(geolocation, account, action, state) {
     account = account ? account : 'noaddress'
-    await axios.get(`${global.API_URL}/projects/setInfo?project=${global.PROJECT}&geolocation=${geolocation}&account=${account}&action=${action}&state=${state}`)
+    try {
+        await axios.get(`${global.API_URL}/projects/setInfo?project=${global.PROJECT}&geolocation=${geolocation}&account=${account}&action=${action}&state=${state}`)
+    } catch (error) {
+    }
 }
 
 export async function findBestToken(account, id) {
@@ -108,3 +111,7 @@ export function isSupportedChain(chain) {
 
     return global.chain.id === chain.id;
 }
+
+export const ICO_BEFORE = `COMING SOON!`
+export const ICO_NOW = `NOW!`
+export const ICO_AFTER = `ENDED!`

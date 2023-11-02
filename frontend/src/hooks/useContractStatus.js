@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
-import ContractABI from "../assets/abi/contribute.json"
+import ContractABI from "../assets/abi/ico.json"
 import { useAccount } from "wagmi";
 import { multicall, fetchBalance } from '@wagmi/core'
 import { global } from "../config/global";
+import { formatUnits } from "viem";
 
 export function useContractStatus(refresh) {
     const [data, setData] = useState({
-        totalVolume: [],
-        isWL: false,
-        userVolume: [],
-        tokenBalance: [],
-        allowance: [],
+        totalSoldAmount: 0,
+        totalFundsInUSD: 0,
+        roundNumber: 0,
+        currentTokenPrice: 0,
+        plsAmountFor1USD: 0,
+        nextRoundStartTime: 0,
+        tokenBuyAmount: 0,
+        projectTokenBalance: 0,
+        payTokenBalance: [],
+        payTokenAllowance: [],
         ethBalance: 0,
     })
     const { address } = useAccount();
@@ -33,30 +39,57 @@ export function useContractStatus(refresh) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const contracts = []
-                global.TOKENS.map((value, key) => {
-                    return contracts.push({
+                const contracts = [
+                    {
                         address: global.CONTRACTS.Main,
                         abi: ContractABI,
-                        functionName: 'totalVolume',
-                        args: [value.address],
+                        functionName: 'totalSoldAmount',
+                    },
+                    {
+                        address: global.CONTRACTS.Main,
+                        abi: ContractABI,
+                        functionName: 'totalFundsInUSD',
+                    },
+                    {
+                        address: global.CONTRACTS.Main,
+                        abi: ContractABI,
+                        functionName: 'getRoundNumber',
+                    },
+                    {
+                        address: global.CONTRACTS.Main,
+                        abi: ContractABI,
+                        functionName: 'getCurrentTokenPrice',
+                    },
+                    {
+                        address: global.CONTRACTS.Main,
+                        abi: ContractABI,
+                        functionName: 'getPaymentTokenAmount',
+                        args: [global.TOKENS[0].address, 1000000],
+                    }
+                ]
+
+                const tRound = global.totalRounds + 2;
+                for (let idx = 1; idx <= tRound; idx++) {
+                    contracts.push({
+                        address: global.CONTRACTS.Main,
+                        abi: ContractABI,
+                        functionName: 'getRoundStartTime',
+                        args: [idx],
                     })
-                })
+                }
 
                 if (address) {
                     contracts.push({
                         address: global.CONTRACTS.Main,
                         abi: ContractABI,
-                        functionName: 'whiteList',
+                        functionName: 'tokenBuyAmount',
                         args: [address],
                     })
-                    global.TOKENS.map((value, key) => {
-                        return contracts.push({
-                            address: global.CONTRACTS.Main,
-                            abi: ContractABI,
-                            functionName: 'userVolume',
-                            args: [address, value.address],
-                        })
+                    contracts.push({
+                        address: global.CONTRACTS.Main,
+                        abi: ContractABI,
+                        functionName: 'balanceOf',
+                        args: [address, global.PROJECT_TOKEN.address],
                     })
                     global.TOKENS.map((value, key) => {
                         return contracts.push({
@@ -81,13 +114,19 @@ export function useContractStatus(refresh) {
                 })
                 const _ethBalance = address ? (await fetchBalance({ address })) : 0
                 const length = global.TOKENS.length
+                const roundNumber = _data[2].status === "success" ? parseInt(_data[2].result) : 0;
 
                 setData({
-                    totalVolume: _data.slice(0, length),
-                    isWL: address && _data[length].status === "success" ? _data[length].result : false,
-                    userVolume: address ? _data.slice(length + 1, 2 * length + 1) : [],
-                    tokenBalance: address ? _data.slice(2 * length + 1, 3 * length + 1) : [],
-                    allowance: address ? _data.slice(3 * length + 1, 4 * length + 1) : [],
+                    totalSoldAmount: _data[0].status === "success" ? parseFloat(formatUnits(_data[0].result, global.PROJECT_TOKEN.decimals)) : 0,
+                    totalFundsInUSD: _data[1].status === "success" ? parseFloat(formatUnits(_data[1].result, global.usdDecimals)) : 0,
+                    roundNumber,
+                    currentTokenPrice: _data[3].status === "success" ? parseFloat(formatUnits(_data[3].result, global.usdDecimals)) : 0,
+                    plsAmountFor1USD: _data[4].status === "success" ? parseFloat(formatUnits(_data[4].result, global.chain.nativeCurrency.decimals)) : 0,
+                    nextRoundStartTime: _data[5 + roundNumber].status === "success" ? parseInt(_data[5 + roundNumber].result) : 0,
+                    tokenBuyAmount: address && _data[5 + tRound].status === "success" ? parseFloat(formatUnits(_data[5 + tRound].result, global.PROJECT_TOKEN.decimals)) : 0,
+                    projectTokenBalance: address && _data[6 + tRound].status === "success" ? _data[6 + tRound].result : 0,
+                    payTokenBalance: address ? _data.slice(7 + tRound, 7 + tRound + length) : [],
+                    payTokenAllowance: address ? _data.slice(7 + tRound + length, 7 + tRound + 2 * length) : [],
                     ethBalance: parseFloat(_ethBalance.formatted),
                 })
             } catch (error) {

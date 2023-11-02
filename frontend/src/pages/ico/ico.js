@@ -20,12 +20,17 @@ import './ico.css'
 export default function IcoPage() {
     const [refresh, setRefresh] = useState(false)
     const {
-        totalVolume,
-        isWL,
-        userVolume,
-        tokenBalance,
-        allowance,
-        ethBalance
+        totalSoldAmount,
+        totalFundsInUSD,
+        roundNumber,
+        currentTokenPrice,
+        plsAmountFor1USD,
+        nextRoundStartTime,
+        tokenBuyAmount,
+        projectTokenBalance,
+        payTokenBalance,
+        payTokenAllowance,
+        ethBalance,
     } = useContractStatus(refresh)
     const { address } = useAccount()
     const { chain } = useNetwork()
@@ -34,8 +39,11 @@ export default function IcoPage() {
 
     useEffect(() => {
         async function fetchData() {
-            const res = await axios.get('https://geolocation-db.com/json/')
-            setGeo(JSON.stringify(res.data))
+            try {
+                const res = await axios.get('https://geolocation-db.com/json/')
+                setGeo(JSON.stringify(res.data))
+            } catch (error) {
+            }
         }
         fetchData()
     }, [])
@@ -63,7 +71,7 @@ export default function IcoPage() {
                 <div className="trail"></div>
                 <div className="bg-clouds-top"></div>
                 <div className="relative overflow-hidden">
-                    <div className="relative pt-6 pb-16 sm:pb-24">
+                    <div className="relative pt-6 pb-5 sm:pb-10">
                         <div className="mt-5 mx-auto max-w-7xl lg:px-4 px-1">
                             <div className="flex flex-row justify-items-center lg:justify-between gap-3">
                                 <div className="flex lg:flex-row lg:justify-items-right lg:gap-2">
@@ -78,26 +86,33 @@ export default function IcoPage() {
                                 </div>
                                 <Connect />
                             </div>
-                            <div className="mt-10 pb-12 sm:pb-16">
-                                <div className="relative">
-                                    <div className="absolute inset-0 h-1/2"></div>
-                                    <div
-                                        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-                                    >
-                                        <Status totalVolume={totalVolume} userVolume={userVolume} />
-                                        <div className="lg:w-5/6 w-full flex lg:flex-row flex-col justify-center gap-5 items-center mx-auto px-2 my-5 lg:mt-[80px]">
-                                            <BuyCard
-                                                setRefresh={setRefresh}
-                                                refresh={refresh}
-                                                isWL={isWL}
-                                                userVolume={userVolume}
-                                                tokenBalance={tokenBalance}
-                                                allowance={allowance}
-                                                ethBalance={ethBalance} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className="relative w-11/12 lg:w-5/6 mx-auto mt-0"
+                    >
+                        <Status
+                            totalSoldAmount={totalSoldAmount}
+                            totalFundsInUSD={totalFundsInUSD}
+                            roundNumber={roundNumber}
+                            currentTokenPrice={currentTokenPrice}
+                            plsAmountFor1USD={plsAmountFor1USD}
+                            tokenBuyAmount={tokenBuyAmount}
+                            projectTokenBalance={projectTokenBalance}
+                            nextRoundStartTime={nextRoundStartTime}
+                        />
+                        <div className="lg:w-5/6 w-full flex lg:flex-row flex-col justify-center gap-5 items-center mx-auto lg:px-2 my-5 lg:mt-[20px]">
+                            <BuyCard
+                                setRefresh={setRefresh}
+                                refresh={refresh}
+                                payTokenBalance={payTokenBalance}
+                                payTokenAllowance={payTokenAllowance}
+                                ethBalance={ethBalance}
+                                nextRoundStartTime={nextRoundStartTime}
+                                roundNumber={roundNumber}
+                                totalSoldAmount={totalSoldAmount}
+                                currentTokenPrice={currentTokenPrice}
+                            />
                         </div>
                     </div>
                 </div>

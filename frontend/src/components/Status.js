@@ -1,19 +1,18 @@
-import { global } from "../config/global";
 import StatusItem from "./StatusItem";
 
 export default function Status(props) {
     return (
-        <div className="w-full mx-auto gap-4 flex lg:flex-row flex-col items-center justify-between text-center lg:px-10 px-3 py-3">
-            {
-                props && props.totalVolume.length === global.TOKENS.length && global.TOKENS.map((value, key) => {
-                    return <StatusItem
-                        key={key}
-                        value={value}
-                        totalVolume={props.totalVolume[key]}
-                        userVolume={props.userVolume && props.userVolume.length > 0 ? props.userVolume[key] : 0}
-                    />
-                })
-            }
+        <div className="w-full mx-auto gap-4 flex lg:flex-row flex-col items-center justify-between text-center px-1 py-3">
+            <StatusItem
+                totalSoldAmount={props.totalSoldAmount}
+                totalFundsInUSD={props.totalFundsInUSD}
+                roundNumber={props.roundNumber}
+                currentTokenPrice={props.currentTokenPrice}
+                tokenBuyAmount={props.tokenBuyAmount}
+                plsAmountFor1USD={props.plsAmountFor1USD}
+                projectTokenBalance={props.projectTokenBalance}
+                nextRoundStartTime={props.nextRoundStartTime}
+            />
         </div>
     );
 }
