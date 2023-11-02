@@ -30,10 +30,6 @@ export function useAmount(token, payAmount, tokenAmount, curTokenPrice) {
             try {
                 const _usdAmount = parseFloat(tokenAmount) && curTokenPrice ? (parseFloat(tokenAmount) * curTokenPrice).toString() : '0'
                 const _payAmount = payAmount ? payAmount.toString() : '0'
-                // console.log(_usdAmount)
-                // console.log(_payAmount)
-                // console.log(parseUnits(_usdAmount, global.usdDecimals))
-                // console.log(parseUnits(payAmount, token.decimals))
                 const contracts = [
                     {
                         address: global.CONTRACTS.Main,
@@ -53,14 +49,13 @@ export function useAmount(token, payAmount, tokenAmount, curTokenPrice) {
                     chainId: global.chain.id,
                     contracts
                 })
-                // console.log(_data)
 
                 setData({
                     payAmountOut: _data[0].status === "success" ? formatUnits(_data[0].result, token.decimals) : '0',
                     tokenAmountOut: curTokenPrice && _data[1].status === "success" ? (parseFloat(formatUnits(_data[1].result, global.usdDecimals))/curTokenPrice).toString() : '0',
                 })
             } catch (error) {
-                console.log('hook err', error)
+                console.log('useAmount err', error)
             }
         };
         fetchData();

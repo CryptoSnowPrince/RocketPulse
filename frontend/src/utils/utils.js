@@ -36,7 +36,7 @@ export function formatNumber(num) {
 }
 
 export const displayRemainTime = (seconds) => {
-    // console.log('displayRemainTime: ', seconds)
+    // console.log('dRT: ', seconds)
     if (seconds > 0) {
         // Calculating the days, hours, minutes and seconds left
         const timeDays = Math.floor(seconds / (60 * 60 * 24))
@@ -59,7 +59,7 @@ export const displayRemainTime = (seconds) => {
 }
 
 export const displayTimeAmount = (seconds) => {
-    // console.log('displayTimeAmount: ', seconds)
+    // console.log('dTA: ', seconds)
     let retString = "";
     if (seconds > 0) {
         // Calculating the days, hours, minutes and seconds left

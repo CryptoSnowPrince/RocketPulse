@@ -133,7 +133,6 @@ export default function BuyItem(props) {
             setPending(true)
             try {
                 // const feeData = await fetchFeeData()
-                // console.log('[PRINCE] feeData: ', feeData)
 
                 let data = {
                     chainId: chain.id,
@@ -199,19 +198,15 @@ export default function BuyItem(props) {
                 }
 
                 const preparedData = await prepareWriteContract(data)
-                // console.log('[PRINCE] preparedData: ', preparedData)
 
                 const writeData = await writeContract(preparedData)
-                // console.log('[PRINCE] writeData: ', writeData)
 
                 const txPendingData = waitForTransaction(writeData)
                 toast.promise(txPendingData, {
                     pending: "Waiting for pending... 👌",
                 });
 
-                // console.log('[PRINCE] txPendingData: ', txPendingData)
                 const txData = await txPendingData;
-                // console.log('[PRINCE] txData: ', txData)
                 if (txData && txData.status === "success") {
                     if (btnMsg === 'ENABLE') {
                         toast.success(`Successfully enabled to buy! 👌`)

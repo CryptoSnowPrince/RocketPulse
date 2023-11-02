@@ -130,7 +130,7 @@ export function useContractStatus(refresh) {
                     ethBalance: parseFloat(_ethBalance.formatted),
                 })
             } catch (error) {
-                console.log('hook err', error)
+                console.log('useContractStatus err', error)
             }
         };
         fetchData();
