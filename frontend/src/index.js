@@ -9,6 +9,23 @@ import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
 import { global } from "./config/global";
 
+const WalletTheme = {
+  colors: {
+    modalBackground: 'linear-gradient(to right, #4250b5, #8b2eb0, #e15897)',
+    modalText: 'white'
+  },
+}
+
+const WalletAvatar = () => {
+  return <img
+    src={global.PROJECT_TOKEN.logo}
+    alt="avatar"
+    width={128}
+    height={128}
+    style={{ borderRadius: 999 }}
+  />;
+};
+
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
     global.chain,
@@ -33,7 +50,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider chains={chains} avatar={WalletAvatar} theme={WalletTheme}>
         <App />
       </RainbowKitProvider>
     </WagmiConfig>

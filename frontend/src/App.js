@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 import MainLayout from "./layout/MainLayout";
 
-// import MainPage from "./pages";
 import IcoPage from "./pages/ico/ico";
 
 const renderLoader = () => (
@@ -31,7 +30,6 @@ function App() {
               <MainLayout>
                 <Suspense fallback={renderLoader()}>
                   <Routes>
-                    {/* <Route path="/old" element={<MainPage />} /> */}
                     <Route path="/" element={<IcoPage />} />
                   </Routes>
                 </Suspense>
