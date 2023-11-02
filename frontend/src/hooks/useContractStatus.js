@@ -112,7 +112,7 @@ export function useContractStatus(refresh) {
                     chainId: global.chain.id,
                     contracts
                 })
-                const _ethBalance = address ? (await fetchBalance({ address })) : 0
+                const ethBalance = address ? parseFloat((await fetchBalance({ address })).formatted) : 0
                 const length = global.TOKENS.length
                 const roundNumber = _data[2].status === "success" ? parseInt(_data[2].result) : 0;
 
@@ -127,7 +127,7 @@ export function useContractStatus(refresh) {
                     projectTokenBalance: address && _data[6 + tRound].status === "success" ? _data[6 + tRound].result : 0,
                     payTokenBalance: address ? _data.slice(7 + tRound, 7 + tRound + length) : [],
                     payTokenAllowance: address ? _data.slice(7 + tRound + length, 7 + tRound + 2 * length) : [],
-                    ethBalance: parseFloat(_ethBalance.formatted),
+                    ethBalance,
                 })
             } catch (error) {
                 console.log('useContractStatus err', error)
