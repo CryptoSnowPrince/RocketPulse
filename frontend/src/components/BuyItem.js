@@ -250,7 +250,7 @@ export default function BuyItem(props) {
                     </div>
                     <div className="w-full lg:w-5/6 px-3 py-1 bg-gray-200/[0.1] flex flex-row items-center justify-between text-2xl text-center gap-2">
                         <input
-                            className={`w-3/5 bg-transparent border-0 focus:border-0 active:border-0 focus:outline-0 ${pending ? `text-gray-800` : `text-white`}`}
+                            className={`w-2/5 lg:w-3/5 bg-transparent border-0 focus:border-0 active:border-0 focus:outline-0 ${pending ? `text-gray-800` : `text-white`}`}
                             placeholder="0"
                             value={payTokenAmount}
                             disabled={pending}
@@ -301,7 +301,7 @@ export default function BuyItem(props) {
                     </div>
                     <div className="w-full lg:w-5/6 px-3 py-1 bg-gray-200/[0.1] flex flex-row items-center justify-between text-2xl text-center gap-2">
                         <input
-                            className={`w-3/5 bg-transparent border-0 focus:border-0 active:border-0 focus:outline-0 ${pending ? `text-gray-800` : `text-white`}`}
+                            className={`w-2/5 lg:w-3/5 bg-transparent border-0 focus:border-0 active:border-0 focus:outline-0 ${pending ? `text-gray-800` : `text-white`}`}
                             placeholder="0"
                             value={outTokenAmount}
                             disabled={pending}
