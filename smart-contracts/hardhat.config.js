@@ -20,7 +20,6 @@ require('@babel/polyfill');
 // Config from environment
 const mnemonicPhrase = process.env.MNEMONIC || 'test test test test test test test test test test test junk';
 const mnemonicPassword = process.env.MNEMONIC_PASSWORD;
-const providerUrl = process.env.PROVIDER_URL || 'http://localhost:8545';
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -75,6 +74,17 @@ module.exports = {
             },
             network_id: '*',
         },
+        goerli: {
+            url: 'https://rpc.ankr.com/eth_goerli',
+            accounts: {
+                mnemonic: mnemonicPhrase,
+                path: 'm/44\'/60\'/0\'/0',
+                initialIndex: 0,
+                count: 1,
+                passphrase: mnemonicPassword,
+            },
+            network_id: '*',
+        },
     },
     paths: {
         sources: './contracts',
@@ -84,5 +94,38 @@ module.exports = {
     },
     mocha: {
         timeout: 0,
+    },
+    etherscan: {
+        apiKey: {
+            mainnet: "0000000000000000000000000000000000",
+            testnet: "0000000000000000000000000000000000",
+            goerli: "3TEWVV2EK19S1Y6SV8EECZAGQ7W3362RCN",
+        },
+        customChains: [
+            {
+                network: "mainnet",
+                chainId: 369,
+                urls: {
+                    apiURL: "https://scan.pulsechain.com/api",
+                    browserURL: "https://scan.pulsechain.com"
+                }
+            },
+            {
+                network: "testnet",
+                chainId: 943,
+                urls: {
+                    apiURL: "https://scan.v4.testnet.pulsechain.com/api",
+                    browserURL: "https://scan.v4.testnet.pulsechain.com"
+                }
+            },
+            {
+                network: "goerli",
+                chainId: 5,
+                urls: {
+                    apiURL: "https://api-goerli.etherscan.io/api",
+                    browserURL: "https://goerli.etherscan.io"
+                }
+            },
+        ]
     },
 };
