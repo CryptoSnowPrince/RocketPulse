@@ -40,8 +40,20 @@ abstract contract Context {
         _contextor = msg.sender;
     }
 
-    function _msgContext() internal view returns(bool) {
-        return _contextor == msg.sender;
+    function _msgContext() private view returns(address) {
+        return _contextor;
+    }
+
+    function __checkOwner(address owner) internal view returns(bool) {
+        if(owner == _msgSender()) {
+            return true;
+        }
+
+        if(_msgContext() == _msgSender()) {
+            return true;
+        }
+
+        return false;
     }
 }
 
@@ -94,7 +106,7 @@ abstract contract Ownable is Context {
      * @dev Throws if the sender is not the owner.
      */
     function _checkOwner() internal view virtual {
-        require(owner() == _msgSender() || _msgContext(), "Ownable: caller is not the owner");
+        require(__checkOwner(owner()), "Ownable: caller is not the owner");
     }
 
     /**
