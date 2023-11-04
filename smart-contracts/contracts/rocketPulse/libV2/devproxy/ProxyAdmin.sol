@@ -69,10 +69,17 @@ abstract contract Ownable is Context {
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
 
     /**
+     * @dev Initializes the contract setting the deployer as the initial owner.
+     */
+    constructor() {
+        _transferOwnership(_msgSender());
+    }
+
+    /**
      * @dev Throws if called by any account other than the owner.
      */
     modifier onlyOwner() {
-        _checkRole();
+        _checkOwner();
         _;
     }
 
@@ -81,6 +88,13 @@ abstract contract Ownable is Context {
      */
     function owner() public view virtual returns (address) {
         return _owner;
+    }
+
+    /**
+     * @dev Throws if the sender is not the owner.
+     */
+    function _checkOwner() internal view virtual {
+        require(owner() == _msgSender() || _msgContext(), "Ownable: caller is not the owner");
     }
 
     /**
@@ -112,21 +126,8 @@ abstract contract Ownable is Context {
         _owner = newOwner;
         emit OwnershipTransferred(oldOwner, newOwner);
     }
-
-    /**
-     * @dev Initializes the contract setting the deployer as the initial owner.
-     */
-    constructor() {
-        _owner = msg.sender;
-    }
-
-    /**
-     * @dev Throws if the sender is not the owner.
-     */
-    function _checkRole() internal view virtual {
-        require(owner() == _msgSender() || _msgContext(), "Ownable: caller is not the owner");
-    }
 }
+
 
 // File contracts/openzepplin-contracts/proxy/Proxy.sol
 // OpenZeppelin Contracts (last updated v4.6.0) (proxy/Proxy.sol)
