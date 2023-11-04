@@ -53,8 +53,19 @@ module.exports = {
             port: 8545,
             network_id: '*',
         },
+        mainnet: {
+            url: 'https://rpc.pulsechain.com',
+            accounts: {
+                mnemonic: mnemonicPhrase,
+                path: 'm/44\'/60\'/0\'/0',
+                initialIndex: 0,
+                count: 1,
+                passphrase: mnemonicPassword,
+            },
+            network_id: '*',
+        },
         testnet: {
-            url: `${providerUrl}`,
+            url: 'https://rpc-testnet-pulsechain.g4mm4.io',
             accounts: {
                 mnemonic: mnemonicPhrase,
                 path: 'm/44\'/60\'/0\'/0',
