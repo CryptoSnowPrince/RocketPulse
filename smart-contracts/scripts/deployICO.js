@@ -40,29 +40,7 @@ async function main() {
   // }
 
   // =====================
-  const bytes = hre.ethers.utils.solidityPack([
-    // "string",
-    "address",
-    "address",
-    "address",
-    "address",
-    "address",
-    "uint256",
-    "uint256",
-  ], [
-    // (hre.ethers.utils.solidityKeccak256("initialize(address,address,address,address,address,uint256,uint256)")),
-    "0x135Eeb2ED1B006d900F091250Bd85907B652B18f",
-    "0x5e1100ea18F918a4e9AB70694c6c554e1E940D32",
-    "0x38AcAA98Db174cEE218A33635322C19cC1155d20",
-    "0xEe8d287B844959ADe40d718Dc23077ba920e2f07",
-    "0x65096Ac2834CA82dCB53AF24E53b28781051d87e",
-    "1698944400",
-    "60000000000000000000000000"
-  ])
 
-  console.log(bytes)
-  const bytes2 = hre.ethers.utils.hexZeroPad("0x65096Ac2834CA82dCB53AF24E53b28781051d87e", 32)
-  console.log(bytes2)
   const ethers = hre.ethers
   const functionSignature = 'initialize(address,address,address,address,address,uint256,uint256)';
   const addresses = [
