@@ -111,7 +111,7 @@ async function main() {
     const rocketPulseICOContract = RocketPulseICO.attach(transparentUpgradeableProxy.address);
 
     const token = await rocketPulseICOContract.token()
-    if (token === rocketPulseRPLSToken.address) {
+    if (token.toLowerCase() === rocketPulseRPLSToken.address.toLowerCase()) {
       console.log('RocketPulseICO Token Setting OK')
     } else {
       console.log('RocketPulseICO Token Setting ERR')
@@ -119,8 +119,7 @@ async function main() {
     }
 
     const daiToken = await rocketPulseICOContract.daiToken()
-    console.log(daiToken)
-    if (daiToken === DAI_ADDRESS) {
+    if (daiToken.toLowerCase() === DAI_ADDRESS.toLowerCase()) {
       console.log('RocketPulseICO DAI_ADDRESS Setting OK')
     } else {
       console.log('RocketPulseICO DAI_ADDRESS Setting ERR')
@@ -128,8 +127,7 @@ async function main() {
     }
 
     const plsDaiPair = await rocketPulseICOContract.plsDaiPair()
-    console.log(plsDaiPair)
-    if (plsDaiPair === PLS_DAI_PAIR_ADDRESS) {
+    if (plsDaiPair.toLowerCase() === PLS_DAI_PAIR_ADDRESS.toLowerCase()) {
       console.log('RocketPulseICO PLS_DAI_PAIR_ADDRESS Setting OK')
     } else {
       console.log('RocketPulseICO PLS_DAI_PAIR_ADDRESS Setting ERR')
@@ -137,7 +135,6 @@ async function main() {
     }
 
     const startTime = await rocketPulseICOContract.startTime()
-    console.log(startTime)
     if (parseInt(startTime) === parseInt(START_TIME)) {
       console.log('RocketPulseICO START_TIME Setting OK')
     } else {
@@ -147,7 +144,6 @@ async function main() {
 
     const allocatedAmountRaw = await rocketPulseICOContract.allocatedAmount()
     const allocatedAmount = hre.ethers.utils.formatUnits(allocatedAmountRaw, 18)
-    console.log(allocatedAmount)
     if (parseFloat(allocatedAmount) === parseFloat(ALLOCATE_AMOUNT)) {
       console.log('RocketPulseICO ALLOCATE_AMOUNT Setting OK')
     } else {

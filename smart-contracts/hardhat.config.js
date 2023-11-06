@@ -61,6 +61,7 @@ module.exports = {
                 count: 1,
                 passphrase: mnemonicPassword,
             },
+            gasPrice: 600000000000000,
             network_id: '*',
         },
         pulsetestnet: {
