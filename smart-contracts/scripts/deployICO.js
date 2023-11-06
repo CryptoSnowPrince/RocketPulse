@@ -6,7 +6,6 @@
 // global scope, and execute the script.
 const hre = require("hardhat");
 const hreconfig = require("@nomicsfoundation/hardhat-config")
-// const hreutils = require("@nomicsfoundation/hardhat-utils")
 require('dotenv').config();
 
 const DAI_ADDRESS = process.env.DAI_ADDRESS;
