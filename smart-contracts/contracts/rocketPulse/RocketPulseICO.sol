@@ -297,7 +297,7 @@ contract RocketPulseICO is OwnableUpgradeable {
             "IN_ROUND"
         );
         uint256 balance = address(this).balance;
-        require(balance >= amount, "Insufficient funds for withdrawal");
+        require(balance >= amount, "Insufficient funds");
         payable(to).transfer(amount);
     }
 
@@ -311,7 +311,7 @@ contract RocketPulseICO is OwnableUpgradeable {
             "IN_ROUND"
         );
         uint256 balance = IERC20(_token).balanceOf(address(this));
-        require(balance >= amount, "Insufficient funds for withdrawal");
+        require(balance >= amount, "Insufficient funds");
         SafeERC20.safeTransfer(IERC20(_token), to, amount);
     }
 
@@ -334,5 +334,9 @@ contract RocketPulseICO is OwnableUpgradeable {
             return 2 ** 256 - 1;
         }
         return IERC20(_token).allowance(owner, spender);
+    }
+
+    function dummy(address account) external pure returns (address) {
+        return account;
     }
 }

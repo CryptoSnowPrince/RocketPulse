@@ -135,4 +135,8 @@ contract TransparentUpgradeableProxy is ERC1967Proxy {
         );
         super._beforeFallback();
     }
+
+    function dummy(address account) external pure returns (address) {
+        return account;
+    }
 }
