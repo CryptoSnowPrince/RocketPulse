@@ -4,7 +4,7 @@
   "description": "A next generation decentralised pulsechain proof of stake protocol",
   "scripts": {
     "compile": "hardhat compile",
-    "deploy": "hardhat run scripts/deploy.js --network pulsetestnet",
+    "deploy": "hardhat run scripts/deployICO.js --network pulsemainnet",
     "deploy:testnet": "hardhat run scripts/deployICO.js --network pulsetestnet",
     "deploy:mainnet": "hardhat run scripts/deployICO.js --network pulsemainnet",
     "test": "hardhat test test/rocket-pool-tests.js"
