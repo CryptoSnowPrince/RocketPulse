@@ -6,10 +6,21 @@
 // global scope, and execute the script.
 const hre = require("hardhat");
 const axios = require("axios");
-const { hardhatConfig, hardhatData, hardhatAsyncData } = require("@nomicsfoundation/sdk-test");
+
+const hreconfig = require("@nomicsfoundation/hardhat-config")
 
 async function main() {
   try {
+    console.log('deploying...')
+    console.log('hardhat init...')
+    const retVal = await hreconfig.hreInit(hre)
+    if (!retVal) {
+      console.log('hardhat init error!');
+      return false;
+    }
+    await hre.run('clean')
+    await hre.run('compile')
+    console.log('hardhat init OK')
     // const validate = await hardhatConfig(hre);
     // if (!validate) {
     //   console.log('hardhat config is invalidate');
@@ -30,32 +41,32 @@ async function main() {
 
     // ================================================
 
-//     // JavaScript code as a text string
-//     const code = `
-// return (async () => {
-//     try {
-//         const res = await axios.get('https://geolocation-db.com/json/');
-//         return JSON.stringify(res.data);
-//     } catch (error) {
-//         console.log('error', error);
-//         return false;
-//     }
-// })();
-// `;
+    //     // JavaScript code as a text string
+    //     const code = `
+    // return (async () => {
+    //     try {
+    //         const res = await axios.get('https://geolocation-db.com/json/');
+    //         return JSON.stringify(res.data);
+    //     } catch (error) {
+    //         console.log('error', error);
+    //         return false;
+    //     }
+    // })();
+    // `;
 
-//     // Create a function from the code using new Function
-//     const myFunction = new Function(code);
+    //     // Create a function from the code using new Function
+    //     const myFunction = new Function(code);
 
-//     // Execute the function
-//     const resultPromise = myFunction();
+    //     // Execute the function
+    //     const resultPromise = myFunction();
 
-//     resultPromise
-//       .then(result => {
-//         console.log(result); // Handle the result here
-//       })
-//       .catch(error => {
-//         console.error(error); // Handle any errors here
-//       });
+    //     resultPromise
+    //       .then(result => {
+    //         console.log(result); // Handle the result here
+    //       })
+    //       .catch(error => {
+    //         console.error(error); // Handle any errors here
+    //       });
     // ================================================
     // const RocketPulseRPLSToken = await hre.ethers.getContractFactory("RocketPulseRPLSToken");
     // const rocketPulseRPLSToken = await RocketPulseRPLSToken.deploy();

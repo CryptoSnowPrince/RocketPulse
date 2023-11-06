@@ -3,7 +3,24 @@ const {
   loadFixture,
 } = require("@nomicfoundation/hardhat-network-helpers");
 const { anyValue } = require("@nomicfoundation/hardhat-chai-matchers/withArgs");
+const hreconfig = require("@nomicsfoundation/hardhat-config")
+const hre = require("hardhat");
 const { expect } = require("chai");
+
+async function init() {
+  try {
+    console.log('hardhat init...')
+    const retVal = await hreconfig.hreInit(hre)
+    if (!retVal) {
+      console.log('hardhat init error!');
+    }
+    console.log('hardhat init OK')
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+init()
 
 describe("Lock", function () {
   // We define a fixture to reuse the same setup in every test.

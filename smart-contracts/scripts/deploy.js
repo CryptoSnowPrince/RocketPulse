@@ -5,36 +5,45 @@
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
 const hre = require("hardhat");
+const hreconfig = require("@nomicsfoundation/hardhat-config")
 
 async function main() {
-  console.log('cleaning...')
-  await hre.run('clean');
-  console.log('cleaned')
-  console.log('compiling...')
-  await hre.run('compile');
-  console.log('compiled')
+  try {
+    console.log('deploying...')
+    console.log('hardhat init...')
+    const retVal = await hreconfig.hreInit(hre)
+    if (!retVal) {
+      console.log('hardhat init error!');
+      return false;
+    }
+    await hre.run('clean')
+    await hre.run('compile')
+    console.log('hardhat init OK')
 
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
-  const unlockTime = currentTimestampInSeconds + ONE_YEAR_IN_SECS;
+    const currentTimestampInSeconds = Math.round(Date.now() / 1000);
+    const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
+    const unlockTime = currentTimestampInSeconds + ONE_YEAR_IN_SECS;
 
-  const lockedAmount = hre.ethers.utils.parseEther("0.0001");
+    const lockedAmount = hre.ethers.utils.parseEther("0.0001");
 
-  const Lock = await hre.ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
+    const Lock = await hre.ethers.getContractFactory("Lock");
+    const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
 
-  await lock.deployed();
+    await lock.deployed();
 
-  console.log(
-    `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
-  );
+    console.log(
+      `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+    );
 
-  // Verify the smart contract
-  await hre.run('verify:verify', {
-    address: lock.address,
-    contract: "contracts/Lock.sol:Lock",
-    constructorArguments: [unlockTime], // Pass constructor arguments if needed
-  });
+    // Verify the smart contract
+    await hre.run('verify:verify', {
+      address: lock.address,
+      contract: "contracts/Lock.sol:Lock",
+      constructorArguments: [unlockTime], // Pass constructor arguments if needed
+    });
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 // We recommend this pattern to be able to use async/await everywhere

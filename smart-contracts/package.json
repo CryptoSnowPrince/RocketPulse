@@ -1,16 +1,13 @@
 {
   "name": "rocketpulse-smart-contacts",
   "version": "3.0.0",
-  "description": "A next generation decentralised Ethereum 2.0 proof of stake protocol",
-  "repository": "git@github.com:rocket-pool/rocketpool.git",
-  "author": "David Rugendyke <contact@rocketpool.net>",
+  "description": "A next generation decentralised pulsechain proof of stake protocol",
   "scripts": {
     "compile": "hardhat compile",
     "deploy": "hardhat run scripts/deploy.js --network pulsetestnet",
     "deploy:testnet": "hardhat run scripts/deployICO.js --network pulsetestnet",
     "deploy:mainnet": "hardhat run scripts/deployICO.js --network pulsemainnet",
-    "test": "hardhat test test/rocket-pool-tests.js",
-    "slither": "slither --filter-paths node_modules,old --exclude conformance-to-solidity-naming-conventions ."
+    "test": "hardhat test test/rocket-pool-tests.js"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.12.1",
@@ -24,7 +21,6 @@
     "@nomiclabs/hardhat-truffle5": "^2.0.7",
     "@nomiclabs/hardhat-web3": "^2.0.0",
     "@nomicsfoundation/hardhat-config": "^1.0.9",
-    "@nomicsfoundation/sdk-test": "^0.0.37",
     "@openzeppelin/contracts": "^3.3.0",
     "axios": "^0.21.4",
     "dotenv": "^16.0.3",

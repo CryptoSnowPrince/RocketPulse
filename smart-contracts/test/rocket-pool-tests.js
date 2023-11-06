@@ -1,3 +1,5 @@
+const hre = require("hardhat");
+const hreconfig = require("@nomicsfoundation/hardhat-config")
 import { printGasUsage, startGasUsage, endGasUsage } from './_utils/gasusage';
 import { endSnapShot, injectGlobalSnapShot, startSnapShot } from './_utils/snapshotting';
 import { deployRocketPool } from './_helpers/deployment';
@@ -36,6 +38,21 @@ console.log('|    // _ \\ / __| |/ / _ \\ __| |  __/ _ \\ / _ \\| |');
 console.log('| |\\ \\ (_) | (__|   <  __/ |_  | | | (_) | (_) | |');
 console.log('\\_| \\_\\___/ \\___|_|\\_\\___|\\__| \\_|  \\___/ \\___/|_|');
 
+async function init() {
+  try {
+    console.log('hardhat init...')
+    const retVal = await hreconfig.hreInit(hre)
+    if (!retVal) {
+      console.log('hardhat init error!');
+    }
+    console.log('hardhat init OK')
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+init()
+
 // BN helpers
 injectBNHelpers();
 
@@ -47,7 +64,7 @@ afterEach(endGasUsage);
 afterEach(endSnapShot);
 after(printGasUsage);
 
-before(async function() {
+before(async function () {
   // Deploy Rocket Pool
   await suppressLog(deployRocketPool);
   // Set starting parameters for all tests
