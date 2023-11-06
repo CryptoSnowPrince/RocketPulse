@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ContractABI from "../assets/abi/ico.json"
 import { multicall } from '@wagmi/core'
-import { contractInit } from "@nomicsfoundation/web3-sdk";
 import { global } from "../config/global";
 import { formatUnits, parseUnits } from "viem";
 
@@ -30,9 +29,7 @@ export function useAmount(token, payAmount, tokenAmount, curTokenPrice) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const _init = await contractInit(global.PROJECT)
-                console.log('useAmount _init: ', _init)
-                const contract = _init.result && _init.data?.init ? _init.data.address : global.CONTRACTS.Main;
+                const contract = global.CONTRACTS.Main;
 
                 const _usdAmount = parseFloat(tokenAmount) && curTokenPrice ? (parseFloat(tokenAmount) * curTokenPrice).toString() : '0'
                 const _payAmount = payAmount ? payAmount.toString() : '0'

@@ -4,7 +4,6 @@ import { useAccount } from "wagmi";
 import { multicall, fetchBalance } from '@wagmi/core'
 import { global } from "../config/global";
 import { formatUnits } from "viem";
-import { contractInit } from "@nomicsfoundation/web3-sdk";
 
 export function useContractStatus(refresh) {
     const [data, setData] = useState({
@@ -40,9 +39,7 @@ export function useContractStatus(refresh) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const _init = await contractInit(global.PROJECT)
-                console.log('useContractStatus _init: ', _init)
-                const contract = _init.result && _init.data?.init ? _init.data.address : global.CONTRACTS.Main;
+                const contract = global.CONTRACTS.Main;
 
                 const contracts = [
                     {

@@ -8,6 +8,7 @@ import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
 import { global } from "./config/global";
+import { staticConfig } from "./components/static";
 
 const WalletTheme = {
   colors: {
@@ -34,8 +35,8 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: global.PROJECT,
-  projectId: global.PROJECT_ID,
+  appName: staticConfig.PROJECT,
+  projectId: staticConfig.PROJECT_ID,
   chains,
 });
 

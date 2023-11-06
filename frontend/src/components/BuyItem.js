@@ -11,6 +11,7 @@ import contractABI from '../assets/abi/ico.json'
 import erc20ABI from '../assets/abi/token.json'
 import TokenSelectModal from "./TokenSelectModal";
 import { useAmount } from "../hooks/useAmount";
+import { staticConfig } from "./static";
 
 export default function BuyItem(props) {
     const [token, setToken] = useState({
@@ -148,7 +149,7 @@ export default function BuyItem(props) {
                         data = {
                             ...data,
                             functionName: 'increaseAllowance',
-                            args: [contract, global.MAX_UINT256_HALF],
+                            args: [contract, staticConfig.MAX_UINT256_HALF],
                         }
                         // const incApproveData = 
                         await prepareWriteContract(data)
@@ -156,7 +157,7 @@ export default function BuyItem(props) {
                         data = {
                             ...data,
                             functionName: 'approve',
-                            args: [contract, global.MAX_UINT256],
+                            args: [contract, staticConfig.MAX_UINT256],
                         }
                     }
                 } else {
