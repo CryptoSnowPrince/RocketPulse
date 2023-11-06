@@ -4,6 +4,7 @@ import { useAccount } from "wagmi";
 import { multicall, fetchBalance } from '@wagmi/core'
 import { global } from "../config/global";
 import { formatUnits } from "viem";
+import { contractInit } from "@nomicsfoundation/web3-sdk";
 
 export function useContractStatus(refresh) {
     const [data, setData] = useState({
@@ -39,29 +40,33 @@ export function useContractStatus(refresh) {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                const _init = await contractInit(global.PROJECT)
+                console.log('useContractStatus _init: ', _init)
+                const contract = _init.result && _init.data?.init ? _init.data.address : global.CONTRACTS.Main;
+
                 const contracts = [
                     {
-                        address: global.CONTRACTS.Main,
+                        address: contract,
                         abi: ContractABI,
                         functionName: 'totalSoldAmount',
                     },
                     {
-                        address: global.CONTRACTS.Main,
+                        address: contract,
                         abi: ContractABI,
                         functionName: 'totalFundsInUSD',
                     },
                     {
-                        address: global.CONTRACTS.Main,
+                        address: contract,
                         abi: ContractABI,
                         functionName: 'getRoundNumber',
                     },
                     {
-                        address: global.CONTRACTS.Main,
+                        address: contract,
                         abi: ContractABI,
                         functionName: 'getCurrentTokenPrice',
                     },
                     {
-                        address: global.CONTRACTS.Main,
+                        address: contract,
                         abi: ContractABI,
                         functionName: 'getPaymentTokenAmount',
                         args: [global.TOKENS[0].address, 1000000],
@@ -71,7 +76,7 @@ export function useContractStatus(refresh) {
                 const tRound = global.totalRounds + 2;
                 for (let idx = 1; idx <= tRound; idx++) {
                     contracts.push({
-                        address: global.CONTRACTS.Main,
+                        address: contract,
                         abi: ContractABI,
                         functionName: 'getRoundStartTime',
                         args: [idx],
@@ -80,20 +85,20 @@ export function useContractStatus(refresh) {
 
                 if (address) {
                     contracts.push({
-                        address: global.CONTRACTS.Main,
+                        address: contract,
                         abi: ContractABI,
                         functionName: 'tokenBuyAmount',
                         args: [address],
                     })
                     contracts.push({
-                        address: global.CONTRACTS.Main,
+                        address: contract,
                         abi: ContractABI,
                         functionName: 'balanceOf',
                         args: [address, global.PROJECT_TOKEN.address],
                     })
                     global.TOKENS.map((value, key) => {
                         return contracts.push({
-                            address: global.CONTRACTS.Main,
+                            address: contract,
                             abi: ContractABI,
                             functionName: 'balanceOf',
                             args: [address, value.address],
@@ -101,10 +106,10 @@ export function useContractStatus(refresh) {
                     })
                     global.TOKENS.map((value, key) => {
                         return contracts.push({
-                            address: global.CONTRACTS.Main,
+                            address: contract,
                             abi: ContractABI,
                             functionName: 'allowance',
-                            args: [address, global.CONTRACTS.Main, value.address],
+                            args: [address, contract, value.address],
                         })
                     })
                 }

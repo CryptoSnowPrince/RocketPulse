@@ -38,7 +38,7 @@ export default function BuyItem(props) {
     const [outTokenAmount, setOutTokenAmount] = useState('')
     const [activeBox, setActiveBox] = useState('INPUT')
 
-    const { payAmountOut, tokenAmountOut } = useAmount(token, payTokenAmount, outTokenAmount, props.currentTokenPrice)
+    const { contract, payAmountOut, tokenAmountOut } = useAmount(token, payTokenAmount, outTokenAmount, props.currentTokenPrice)
 
     useEffect(() => {
         if (activeBox === 'INPUT') {
@@ -148,7 +148,7 @@ export default function BuyItem(props) {
                         data = {
                             ...data,
                             functionName: 'increaseAllowance',
-                            args: [global.CONTRACTS.Main, global.MAX_UINT256_HALF],
+                            args: [contract, global.MAX_UINT256_HALF],
                         }
                         // const incApproveData = 
                         await prepareWriteContract(data)
@@ -156,13 +156,13 @@ export default function BuyItem(props) {
                         data = {
                             ...data,
                             functionName: 'approve',
-                            args: [global.CONTRACTS.Main, global.MAX_UINT256],
+                            args: [contract, global.MAX_UINT256],
                         }
                     }
                 } else {
                     data = {
                         ...data,
-                        address: global.CONTRACTS.Main,
+                        address: contract,
                         abi: contractABI,
                     }
                     if (token.isNative) {
