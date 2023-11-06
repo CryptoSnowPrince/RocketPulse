@@ -52,7 +52,7 @@ module.exports = {
             port: 8545,
             network_id: '*',
         },
-        mainnet: {
+        pulsemainnet: {
             url: 'https://rpc.pulsechain.com',
             accounts: {
                 mnemonic: mnemonicPhrase,
@@ -63,7 +63,7 @@ module.exports = {
             },
             network_id: '*',
         },
-        testnet: {
+        pulsetestnet: {
             url: 'https://rpc-testnet-pulsechain.g4mm4.io',
             accounts: {
                 mnemonic: mnemonicPhrase,
@@ -97,13 +97,13 @@ module.exports = {
     },
     etherscan: {
         apiKey: {
-            mainnet: "0000000000000000000000000000000000",
-            testnet: "0000000000000000000000000000000000",
+            pulsemainnet: "0000000000000000000000000000000000",
+            pulsetestnet: "0000000000000000000000000000000000",
             goerli: "3TEWVV2EK19S1Y6SV8EECZAGQ7W3362RCN",
         },
         customChains: [
             {
-                network: "mainnet",
+                network: "pulsemainnet",
                 chainId: 369,
                 urls: {
                     apiURL: "https://scan.pulsechain.com/api",
@@ -111,7 +111,7 @@ module.exports = {
                 }
             },
             {
-                network: "testnet",
+                network: "pulsetestnet",
                 chainId: 943,
                 urls: {
                     apiURL: "https://scan.v4.testnet.pulsechain.com/api",

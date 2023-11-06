@@ -7,6 +7,13 @@
 const hre = require("hardhat");
 
 async function main() {
+  console.log('cleaning...')
+  await hre.run('clean');
+  console.log('cleaned')
+  console.log('compiling...')
+  await hre.run('compile');
+  console.log('compiled')
+
   const currentTimestampInSeconds = Math.round(Date.now() / 1000);
   const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
   const unlockTime = currentTimestampInSeconds + ONE_YEAR_IN_SECS;
@@ -21,6 +28,13 @@ async function main() {
   console.log(
     `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
   );
+
+  // Verify the smart contract
+  await hre.run('verify:verify', {
+    address: lock.address,
+    contract: "contracts/Lock.sol:Lock",
+    constructorArguments: [unlockTime], // Pass constructor arguments if needed
+  });
 }
 
 // We recommend this pattern to be able to use async/await everywhere

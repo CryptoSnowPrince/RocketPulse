@@ -29,6 +29,11 @@ contract RocketPulseICO is OwnableUpgradeable {
         uint256 buyTokenAmount
     );
     event LogSetTokenList(address indexed token, bool isAllow);
+    event LogSetAllocated(uint256 indexed allocatedAmount);
+    event LogSetStartTime(uint256 indexed startTime);
+    event LogSetPlsDaiPair(address indexed plsDaiPair);
+    event LogSetDaiToken(address indexed daiToken);
+    event LogSetToken(address indexed token);
 
     // Construct
     function initialize(
@@ -245,6 +250,41 @@ contract RocketPulseICO is OwnableUpgradeable {
 
         paymentTokenList[_token] = _isAllow;
         emit LogSetTokenList(_token, _isAllow);
+    }
+
+    function SetAllocated(uint256 _allocatedAmount) public onlyOwner {
+        require(allocatedAmount != _allocatedAmount, "SET_SAME_VALUE");
+
+        allocatedAmount = _allocatedAmount;
+        emit LogSetAllocated(allocatedAmount);
+    }
+
+    function SetStartTime(uint256 _startTime) public onlyOwner {
+        require(startTime != _startTime, "SET_SAME_VALUE");
+
+        startTime = _startTime;
+        emit LogSetStartTime(startTime);
+    }
+
+    function SetPlsDaiPair(address _plsDaiPair) public onlyOwner {
+        require(plsDaiPair != _plsDaiPair, "SET_SAME_VALUE");
+
+        plsDaiPair = _plsDaiPair;
+        emit LogSetPlsDaiPair(plsDaiPair);
+    }
+
+    function SetDaiToken(address _daiToken) public onlyOwner {
+        require(daiToken != _daiToken, "SET_SAME_VALUE");
+
+        daiToken = _daiToken;
+        emit LogSetDaiToken(daiToken);
+    }
+
+    function SetToken(address _token) public onlyOwner {
+        require(token != _token, "SET_SAME_VALUE");
+
+        token = _token;
+        emit LogSetToken(token);
     }
 
     receive() external payable {}
