@@ -65,9 +65,6 @@ async function main() {
 
     await proxyAdmin.deployed();
 
-    console.log(
-      `proxyAdmin deployed to ${proxyAdmin.address}`
-    );
     const TransparentUpgradeableProxy = await hre.ethers.getContractFactory("contracts/rocketPulse/libV2/proxy/TransparentUpgradeableProxy.sol:TransparentUpgradeableProxy");
     const proxyConfig = await hreconfig.hreConfig(
       hre,
